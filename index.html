@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dayver Moreta | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body class="smooth-scroll">
+    <div class="background-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <nav class="glass-nav">
+        <div class="nav-logo">DM<span class="dot">.</span></div>
+        <div class="nav-links">
+            <a href="#home">Inicio</a>
+            <a href="#about">Sobre Mí</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#ai-ecosystem">IA</a>
+            <a href="#friday">F.R.I.D.A.Y.</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="home" class="glass-card hero">
+            <div class="content">
+                <h1 class="gradient-text">Dayver Moreta</h1>
+                <p class="subtitle">System Architect & AI Explorer</p>
+                <div class="social-links">
+                    <a href="https://github.com/Duvetsillo" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/dayver-moreta-501771419/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="glass-card">
+            <div class="content">
+                <h2 class="section-title">Filosofía</h2>
+                <p>Construyo sistemas reales para resolver problemas reales. Mi enfoque combina la ingeniería de hardware con la automatización de software, priorizando la eficiencia, la privacidad y la autonomía técnica.</p>
+            </div>
+        </section>
+
+        <section id="homelab" class="glass-card">
+            <div class="content">
+                <h2 class="section-title">Infraestructura</h2>
+                <div class="tech-grid">
+                    <div class="tech-box" onclick="toggleStack('stack-virt')">
+                        <i class="fas fa-server"></i>
+                        <h3>Sistemas</h3>
+                        <div id="stack-virt" class="stack-content hidden">
+                            <div class="tags">
+                                <span>Proxmox VE</span><span>LXC</span><span>Docker</span><span>Apple Silicon</span><span>Linux</span>
+                            </div>
+                        </div>
+                        <span class="expand-hint">Detalles</span>
+                    </div>
+                    <div class="tech-box" onclick="toggleStack('stack-core')">
+                        <i class="fas fa-cloud"></i>
+                        <h3 class="accent">Core</h3>
+                        <div id="stack-core" class="stack-content hidden">
+                            <div class="tags">
+                                <span>Immich</span><span>Jellyfin</span><span>AdGuard</span><span>Tailscale</span>
+                            </div>
+                        </div>
+                        <span class="expand-hint">Detalles</span>
+                    </div>
+                    <div class="tech-box" onclick="toggleStack('stack-media')">
+                        <i class="fas fa-sync"></i>
+                        <h3>Media</h3>
+                        <div id="stack-media" class="stack-content hidden">
+                            <div class="tags">
+                                <span>Sonarr</span><span>Radarr</span><span>Prowlarr</span><span>Bazarr</span>
+                            </div>
+                        </div>
+                        <span class="expand-hint">Detalles</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ai-ecosystem" class="glass-card">
+            <div class="content">
+                <h2 class="section-title">IA Local</h2>
+                <div class="ai-timeline">
+                    <div class="ai-node">
+                        <div class="node-header">
+                            <h3 class="karen-title">KAREN</h3>
+                            <span class="node-tag">Origen</span>
+                        </div>
+                        <p>El núcleo inicial de automatización e interacción natural.</p>
+                    </div>
+                    <div class="ai-node">
+                        <div class="node-header">
+                            <h3 class="legacy-title">Ultron</h3>
+                            <span class="node-tag">Control</span>
+                        </div>
+                        <p>Enfoque en autoridad sistémica y ejecución táctica de comandos.</p>
+                    </div>
+                    <div class="ai-node">
+                        <div class="node-header">
+                            <h3 class="friday-title">F.R.I.D.A.Y.</h3>
+                            <span class="node-tag">Actual</span>
+                        </div>
+                        <p>Orquestación de infraestructura y soporte operativo de alta precisión.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="glass-card">
+            <div class="content">
+                <h2 class="section-title">Expertise</h2>
+                <div class="project-grid">
+                    <div class="project-item" onclick="toggleStack('stack-domo')">
+                        <i class="fas fa-home"></i>
+                        <h3>Domótica</h3>
+                        <div id="stack-domo" class="stack-content hidden">
+                            <div class="tags"><span>Home Assistant</span><span>ESP32</span><span>Alexa</span></div>
+                        </div>
+                    </div>
+                    <div class="project-item" onclick="toggleStack('stack-net')">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Redes</h3>
+                        <div id="stack-net" class="stack-content hidden">
+                            <div class="tags"><span>UniFi</span><span>Tailscale</span><span>DNS</span></div>
+                        </div>
+                    </div>
+                    <div class="project-item" onclick="toggleStack('stack-hard')">
+                        <i class="fas fa-memory"></i>
+                        <h3>Hardware</h3>
+                        <div id="stack-hard" class="stack-content hidden">
+                            <div class="tags"><span>AMD Ryzen</span><span>RTX NVIDIA</span><span>Overclocking</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="friday" class="glass-card friday-section">
+            <div class="content">
+                <h2 class="friday-title">F.R.I.D.A.Y.</h2>
+                <p>Soporte operativo de alto nivel. Gestión de infraestructura y monitoreo en tiempo real.</p>
+                <div class="friday-status">
+                    <span class="status-dot"></span> Online
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
