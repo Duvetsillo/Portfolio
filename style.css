@@ -72,7 +72,7 @@ body {
 /* Navigation */
 .glass-nav {
     position: fixed;
-    top: 30px;
+    top: 20px;
     width: 90%;
     max-width: 1000px;
     background: rgba(255, 255, 255, 0.03);
@@ -80,7 +80,7 @@ body {
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
     border-radius: 100px;
-    padding: 0.6rem 2rem;
+    padding: 0.6rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -97,13 +97,18 @@ body {
     color: var(--accent-color);
 }
 
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
 .nav-links a {
     color: #fff;
     text-decoration: none;
-    margin-left: 2rem;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     opacity: 0.5;
     transition: 0.3s ease;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -113,10 +118,10 @@ body {
 
 /* Main Layout */
 .container {
-    padding: 150px 20px;
+    padding: 120px 20px;
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 40px;
     width: 100%;
     max-width: 850px;
 }
@@ -128,7 +133,7 @@ body {
     -webkit-backdrop-filter: blur(30px);
     border: 1px solid var(--glass-border);
     border-radius: 24px;
-    padding: 3rem;
+    padding: 2rem;
     transition: transform 0.6s cubic-bezier(0.2, 0, 0.2, 1), border-color 0.3s ease;
     animation: fadeIn 1s ease-out forwards;
     will-change: transform;
@@ -145,7 +150,7 @@ body {
 }
 
 .gradient-text {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 8vw, 3.5rem);
     text-align: center;
     background: linear-gradient(to bottom, #fff, #888);
     -webkit-background-clip: text;
@@ -154,7 +159,7 @@ body {
 
 .subtitle {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
     opacity: 0.6;
     margin-bottom: 2rem;
 }
@@ -214,6 +219,8 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .node-info {
@@ -352,7 +359,7 @@ body {
     display: block;
 }
 
-/* AI Evolution Timeline - ENHANCED */
+/* AI Evolution Timeline */
 .ai-evolution {
     display: flex;
     flex-direction: column;
@@ -453,7 +460,7 @@ body {
 
 .project-icon {
     font-size: 1.5rem;
-    color: var(--accent-//color);
+    color: var(--accent-color);
     margin-bottom: 1rem;
 }
 
@@ -492,7 +499,7 @@ body {
     text-align: center;
     padding: 20px;
     background: rgba(255,255,255,0.02);
-    border-radius: 20px;
+    border-//radius: 20px;
     transition: 0.3s;
 }
 
@@ -560,4 +567,83 @@ body {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   MOBILE OPTIMIZATION (RESPONSIVE DESIGN)
+   ============================================================ */
+
+@media (max-width: 768px) {
+    .glass-nav {
+        top: 10px;
+        padding: 0.6rem 1rem;
+        justify-content: center;
+    }
+
+    .nav-logo {
+        display: none; /* Ocultamos logo en móvil para dar espacio a links */
+    }
+
+    .nav-links {
+        gap: 0.5rem;
+    }
+
+    .nav-links a {
+        font-size: 0.65rem;
+    }
+
+    .container {
+        padding: 100px 15px;
+        gap: 30px;
+    }
+
+    .glass-card {
+        padding: 1.5rem;
+    }
+
+    .gradient-text {
+        font-size: 2.2rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .status-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .status-grid {
+        grid-template-columns: 1fr; /* Un solo servicio por fila en móvil */
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ai-stage {
+        padding: 1.2rem;
+    }
+
+    .stage-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .stage-details {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .friday-detail-grid {
+        grid-template-columns: 1fr;
+    }
 }
