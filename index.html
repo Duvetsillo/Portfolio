@@ -3,77 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dayver Moreta | Portfolio</title>
+    <title>Dayver Moreta | System Architect & AI Pioneer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="smooth-scroll">
     <div class="background-container">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
     </div>
 
     <nav class="glass-nav">
         <div class="nav-logo">DM<span class="dot">.</span></div>
         <div class="nav-links">
             <a href="#home">Inicio</a>
-            <a href="#about">Sobre Mí</a>
-            <a href="#projects">Proyectos</a>
-            <a href="#ai-ecosystem">IA</a>
+            <a href="#about">Filosofía</a>
+            <a href="#homelab">Infraestructura</a>
+            <a href="#ai-ecosystem">IA Ecosystem</a>
+            <a href="#projects">Expertise</a>
             <a href="#friday">F.R.I.D.A.Y.</a>
         </div>
     </nav>
 
     <main class="container">
+        <!-- HERO SECTION -->
         <section id="home" class="glass-card hero">
             <div class="content">
                 <h1 class="gradient-text">Dayver Moreta</h1>
-                <p class="subtitle">System Architect & AI Explorer</p>
+                <p class="subtitle">System Architect & AI Pioneer | Especialista en Infraestructura, Virtualización y Agentes de IA Local</p>
                 <div class="social-links">
                     <a href="https://github.com/Duvetsillo" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/dayver-moreta-501771419/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                 </div>
+                <div class="hero-badges">
+                    <span class="badge">Linux Specialist</span>
+                    <span class="badge">Apple Silicon</span>
+                    <span class="badge">Proxmox VE</span>
+                    <span class="badge">Local LLMs</span>
+                    <span class="badge">Docker & K8s</span>
+                    <span class="badge">Network Engineering</span>
+                </div>
             </div>
         </section>
 
+        <!-- PHILOSOPHY SECTION -->
         <section id="about" class="glass-card">
             <div class="content">
-                <h2 class="section-title">Filosofía</h2>
-                <p>Construyo sistemas reales para resolver problemas reales. Mi enfoque combina la ingeniería de hardware con la automatización de software, priorizando la eficiencia, la privacidad y la autonomía técnica.</p>
+                <h2 class="section-title"><i class="fas fa-lightbulb"></i> Filosofía de Ingeniería</h2>
+                <p>Mi enfoque se aleja de la teoría pasiva. Creo en la <strong class="accent">construcción iterativa</strong>: investigar un problema, diseñar la solución, romper el sistema y reconstruirlo con mayor eficiencia. Para mí, la programación no es el fin, sino la herramienta definitiva para resolver problemas reales, automatizar entornos complejos y crear sistemas autónomos que optimicen la vida digital.</p>
+                <p style="margin-top: 1rem; opacity: 0.8;">Busco la intersección perfecta entre la potencia del hardware y la inteligencia del software, priorizando la privacidad, la baja latencia y la soberanía tecnológica.</p>
             </div>
         </section>
 
+        <!-- HOMELAB / INFRASTRUCTURE SECTION -->
         <section id="homelab" class="glass-card">
             <div class="content">
-                <h2 class="section-title">Infraestructura</h2>
+                <h2 class="section-title"><i class="fas fa-server"></i> Infraestructura & Homelab</h2>
+                <p>Despliegue de un centro de datos doméstico avanzado basado en <strong class="accent">Proxmox VE</strong>, integrando flujos de trabajo entre Linux y Apple Silicon para maximizar la eficiencia computacional.</p>
+                
+                <div class="status-panel">
+                    <div class="status-header">
+                        <div class="node-info">
+                            <img src="file:///C:/Users/Dayve/Desktop/logo/proxmox (1).png" class="node-logo" alt="Proxmox Logo">
+                            <span class="status-title">System Health Monitor (Node-01)</span>
+                        </div>
+                        <span id="status-global" class="status-badge online">All Systems Nominal</span>
+                    </div>
+                    <div id="status-grid" class="status-grid">
+                        <div class="status-item">
+                            <span class="status-dot online"></span> 
+                            <span class="service-name">Proxmox VE</span>
+                            <span class="service-uptime">99.9%</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot online"></span> 
+                            <span class="service-name">Immich</span>
+                            <span class="service-uptime">98.2%</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot online"></span> 
+                            <span class="service-name">Jellyfin</span>
+                            <span class="service-uptime">99.5%</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot online"></span> 
+                            <span class="service-name">AdGuard Home</span>
+                            <span class="service-uptime">100%</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot online"></span> 
+                            <span class="service-name">Nextcloud</span>
+                            <span class="service-uptime">97.8%</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot online"></span> 
+                            <span class="service-name">Tailscale</span>
+                            <span class="service-uptime">100%</span>
+                        </div>
+                    </div>
+                    <div class="uptime-counter">
+                        <i class="fas fa-clock"></i> 
+                        <span>Uptime: <span id="uptime-timer">0d 0h 0m 0s</span></span>
+                    </div>
+                </div>
+
                 <div class="tech-grid">
                     <div class="tech-box" onclick="toggleStack('stack-virt')">
-                        <i class="fas fa-server"></i>
-                        <h3>Sistemas</h3>
+                        <i class="fas fa-layer-group"></i>
+                        <h3>Sistemas & Virtualización</h3>
                         <div id="stack-virt" class="stack-content hidden">
                             <div class="tags">
-                                <span>Proxmox VE</span><span>LXC</span><span>Docker</span><span>Apple Silicon</span><span>Linux</span>
+                                <span>Proxmox VE</span><span>LXC</span><span>Docker</span><span>Ubuntu</span><span>Debian</span><span>Apple Silicon</span>
                             </div>
                         </div>
                         <span class="expand-hint">Detalles</span>
                     </div>
                     <div class="tech-box" onclick="toggleStack('stack-core')">
                         <i class="fas fa-cloud"></i>
-                        <h3 class="accent">Core</h3>
+                        <h3 class="accent">Core Services</h3>
                         <div id="stack-core" class="stack-content hidden">
                             <div class="tags">
-                                <span>Immich</span><span>Jellyfin</span><span>AdGuard</span><span>Tailscale</span>
+                                <span>Immich</span><span>Jellyfin</span><span>AdGuard Home</span><span>Nextcloud</span><span>Tailscale</span>
                             </div>
                         </div>
                         <span class="expand-hint">Detalles</span>
                     </div>
                     <div class="tech-box" onclick="toggleStack('stack-media')">
                         <i class="fas fa-sync"></i>
-                        <h3>Media</h3>
+                        <h3>Media Automation</h3>
                         <div id="stack-media" class="stack-content hidden">
                             <div class="tags">
-                                <span>Sonarr</span><span>Radarr</span><span>Prowlarr</span><span>Bazarr</span>
+                                <span>Sonarr</span><span>Radarr</span><span>Prowlarr</span><span>Bazarr</span><span>Seerr</span>
                             </div>
                         </div>
                         <span class="expand-hint">Detalles</span>
@@ -82,70 +144,132 @@
             </div>
         </section>
 
+        <!-- AI ECOSYSTEM SECTION -->
         <section id="ai-ecosystem" class="glass-card">
             <div class="content">
-                <h2 class="section-title">IA Local</h2>
-                <div class="ai-timeline">
-                    <div class="ai-node">
-                        <div class="node-header">
-                            <h3 class="karen-title">KAREN</h3>
-                            <span class="node-tag">Origen</span>
+                <h2 class="section-title"><i class="fas fa-microchip"></i> Ecosistema de IA Local</h2>
+                <p>Soberanía tecnológica a través de la implementación de LLMs y agentes autónomos ejecutados localmente, priorizando la privacidad, la latencia cero y el control total sobre los datos.</p>
+                
+                <div class="ai-evolution">
+                    <!-- KAREN -->
+                    <div class="ai-stage genesis">
+                        <div class="stage-header">
+                            <div class="stage-icon"><i class="fas fa-seedling"></i></div>
+                            <div class="stage-text">
+                                <h3 class="karen-title">KAREN <span class="tag-label">El Origen</span></h3>
+                                <p>El núcleo fundacional. KAREN fue el primer experimento en interacción natural y automatización básica. Representa el despertar del asistente personal, estableciendo los protocolos de comunicación y el manejo de comandos que permitieron la evolución hacia sistemas más complejos.</p>
+                                <div class="stage-details">
+                                    <span><i class="fas fa-check"></i> Primera capa de NLP</span>
+                                    <span><i class="fas fa-check"></i> Control básico de OS</span>
+                                    <span><i class="fas fa-check"></i> Automatización de rutinas</span>
+                                </div>
+                            </div>
                         </div>
-                        <p>El núcleo inicial de automatización e interacción natural.</p>
                     </div>
-                    <div class="ai-node">
-                        <div class="node-header">
-                            <h3 class="legacy-title">Ultron</h3>
-                            <span class="node-tag">Control</span>
+                    
+                    <!-- ULTRON -->
+                    <div class="ai-stage legacy">
+                        <div class="stage-header">
+                            <div class="stage-icon"><i class="fas fa-shield-virus"></i></div>
+                            <div class="stage-text">
+                                <h3 class="legacy-title">ULTRON <span class="tag-label">El Control</span></h3>
+                                <p>La etapa de autoridad sistémica y poder técnico. Centrado en la gestión táctica, la ejecución de comandos directos y la capacidad de interactuar con el hardware a nivel profundo.</p>
+                                <div class="stage-details">
+                                    <span><i class="fas fa-check"></i> Acceso Root & SSH</span>
+                                    <span><i class="fas fa-check"></i> Gestión de Contenedores</span>
+                                    <span><i class="fas fa-check"></i> Control de Infraestructura</span>
+                                </div>
+                            </div>
                         </div>
-                        <p>Enfoque en autoridad sistémica y ejecución táctica de comandos.</p>
                     </div>
-                    <div class="ai-node">
-                        <div class="node-header">
-                            <h3 class="friday-title">F.R.I.D.A.Y.</h3>
-                            <span class="node-tag">Actual</span>
+                    
+                    <!-- FRIDAY -->
+                    <div class="ai-stage current">
+                        <div class="stage-header">
+                            <div class="stage-icon"><i class="fas fa-brain"></i></div>
+                            <div class="stage-text">
+                                <h3 class="friday-title">F.R.I.D.A.Y. <span class="tag-label">La Orquestación</span></h3>
+                                <p>El estado actual del arte. Un agente operativo de alta precisión capaz de orquestar la infraestructura completa, monitorear la salud del sistema en tiempo real y proporcionar soporte técnico autónomo.</p>
+                                <div class="stage-details">
+                                    <span><i class="fas fa-check"></i> Orquestación de Nodo</span>
+                                    <span><i class="fas fa-check"></i> Monitoreo Proactivo</span>
+                                    <span><i class="fas fa-check"></i> Capa de Razonamiento LLM avanzada</span>
+                                </div>
+                            </div>
                         </div>
-                        <p>Orquestación de infraestructura y soporte operativo de alta precisión.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- OTHER PROJECTS -->
         <section id="projects" class="glass-card">
             <div class="content">
-                <h2 class="section-title">Expertise</h2>
+                <h2 class="section-title"><i class="fas fa-tools"></i> Expertise Técnica</h2>
                 <div class="project-grid">
                     <div class="project-item" onclick="toggleStack('stack-domo')">
-                        <i class="fas fa-home"></i>
-                        <h3>Domótica</h3>
+                        <div class="project-icon"><i class="fas fa-home"></i></div>
+                        <h3>Domótica Inteligente</h3>
+                        <p>Centralización via Home Assistant, integrando hardware ESP32 y automatizaciones inteligentes.</p>
                         <div id="stack-domo" class="stack-content hidden">
-                            <div class="tags"><span>Home Assistant</span><span>ESP32</span><span>Alexa</span></div>
+                            <div class="tags">
+                                <span>Home Assistant</span><span>HACS</span><span>ESP32</span><span>Alexa</span><span>Apple Ecosystem</span>
+                            </div>
                         </div>
+                        <span class="expand-hint">Detalles</span>
                     </div>
                     <div class="project-item" onclick="toggleStack('stack-net')">
-                        <i class="fas fa-network-wired"></i>
-                        <h3>Redes</h3>
+                        <div class="project-icon"><i class="fas fa-network-wired"></i></div>
+                        <h3>Infraestructura de Red</h3>
+                        <p>Sistemas UniFi, DNS filtrados y redes privadas meshes mediante Tailscale.</p>
                         <div id="stack-net" class="stack-content hidden">
-                            <div class="tags"><span>UniFi</span><span>Tailscale</span><span>DNS</span></div>
+                            <div class="tags">
+                                <span>UniFi</span><span>AdGuard Home</span><span>Tailscale</span><span>VPN</span><span>DNS</span>
+                            </div>
                         </div>
+                        <span class="expand-hint">Detalles</span>
                     </div>
                     <div class="project-item" onclick="toggleStack('stack-hard')">
-                        <i class="fas fa-memory"></i>
-                        <h3>Hardware</h3>
+                        <div class="project-icon"><i class="fas fa-memory"></i></div>
+                        <h3>Hardware Tuning l PC Building</h3>
+                        <p>Optimización de estaciones de trabajo, gestión térmica avanzada y overclocking estable en plataformas AMD/NVIDIA.</p>
                         <div id="stack-hard" class="stack-content hidden">
-                            <div class="tags"><span>AMD Ryzen</span><span>RTX NVIDIA</span><span>Overclocking</span></div>
+                            <div class="tags">
+                                <span>AMD Ryzen</span><span>NVIDIA RTX</span><span>Thermal Modding</span><span>Overclocking</span>
+                            </div>
                         </div>
+                        <span class="expand-hint">Detalles</span>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- FRIDAY DETAILED SECTION -->
         <section id="friday" class="glass-card friday-section">
             <div class="content">
-                <h2 class="friday-title">F.R.I.D.A.Y.</h2>
-                <p>Soporte operativo de alto nivel. Gestión de infraestructura y monitoreo en tiempo real.</p>
-                <div class="friday-status">
-                    <span class="status-dot"></span> Online
+                <h2 class="friday-title"><i class="fas fa-robot"></i> F.R.I.D.A.Y.</h2>
+                <div class="friday-detail-grid">
+                    <div class="detail-item">
+                        <i class="fas fa-terminal"></i>
+                        <h3>Gestión Operativa</h3>
+                        <p>Capacidad de interactuar directamente con la terminal del servidor, ejecutar scripts de mantenimiento y diagnosticar fallos en tiempo real.</p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Monitoreo Autónomo</h3>
+                        <p>Vigilancia constante de la salud de los CTs, consumo de recursos y alertas preventivas ante caídas de servicios críticos.</p>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-user-shield"></i>
+                        <h3>Soporte Técnico</h3>
+                        <p>Asistente especializado en la resolución de problemas de infraestructura, redes y despliegue de contenedores.</p>
+                    </div>
+                </div>
+                <div class="friday-footer">
+                    <div class="friday-status">
+                        <span class="status-dot"></span> Online & Operational
+                    </div>
+                    <p class="friday-tagline">"Soberanía tecnológica a través de la inteligencia local."</p>
                 </div>
             </div>
         </section>
