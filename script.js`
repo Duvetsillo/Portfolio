@@ -45,34 +45,33 @@ document.addEventListener('DOMContentLoaded', () => {
         stack.classList.toggle('show');
     };
 
-    // 4. CLEANED: Simulated Live Monitor (Removed percentages)
+    // 4. RESTORED: Simulated Live Monitor with Realistic Percentages
     function updateSimulatedStatus() {
         const grid = document.getElementById('status-grid');
         const globalBadge = document.getElementById('status-global');
         if(!grid) return;
 
         const services = [
-            { name: 'Proxmox Node', status: 'online' },
-            { name: 'Immich', status: 'online' },
-            { name: 'Jellyfin', status: 'online' },
-            { name: 'AdGuard Home', status: 'online' },
-            { name: 'Nextcloud', status: 'online' },
-            { name: 'Tailscale', status: 'online' },
+            { name: 'Proxmox Node', status: 'online', uptime: '99.9%' },
+            { name: 'Immich', status: 'online', uptime: '98.2%' },
+            { name: 'Jellyfin', status: 'online', uptime: '99.5%' },
+            { name: 'AdGuard Home', status: 'online', uptime: '100%' },
+            { name: 'Nextcloud', status: 'online', uptime: '97.8%' },
+            { name: 'Tailscale', status: 'online', uptime: '100%' },
         ];
 
         grid.innerHTML = '';
         services.forEach(s => {
             const item = document.createElement('div');
             item.className = 'status-item';
-            // Removed the uptime percentage entirely
-            item.innerHTML = `<span class="status-dot ${s.status === 'online' ? 'status-online' : 'status-offline'}"></span> <span class="service-name">${s.name}</span>`;
+            item.innerHTML = `<span class="status-dot ${s.status === 'online' ? 'status-online' : 'status-offline'}"></span> <span class="service-name">${s.name}</span> <span class="service-uptime">${s.uptime}</span>`;
             grid.appendChild(item);
         });
 
         globalBadge.innerText = 'All Systems Nominal';
     }
 
-    // 5. Persistent Absolute Uptime Timer
+    // 5. FIXED: Persistent Absolute Uptime Timer
     function updateUptime() {
         const timerElement = document.getElementById('uptime-timer');
         if(!timerElement) return;
