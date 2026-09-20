@@ -1,8 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.glass-card');
-    
-    // 120Hz LERP Animation
+    // 1. Smooth Scroll Reveal
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+        const triggerBottom = window.innerHeight * 0.85;
+        revealElements.forEach(el => {
+            const elementTop = el.getBoundingClientRect().top;
+            if (elementTop < triggerBottom) {
+                el.classList.add('active');
+            }
+        });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+
+    // 2. Ultra-Smooth 3D Parallax
+    const cards = document.querySelectorAll('.glass-card, .matrix-item, .exp-card, .f-item');
     let mouseX = 0, mouseY = 0, currentX = 0, currentY = 0;
+
     document.addEventListener('mousemove', (e) => {
         mouseX = e.clientX;
         mouseY = e.clientY;
@@ -24,19 +38,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     animate();
 
+    // 3. Fluid Stack Toggle
     window.toggleStack = function(stackId) {
         const stack = document.getElementById(stackId);
         if (!stack) return;
         stack.classList.toggle('show');
-        const hint = stack.parentElement.querySelector('.expand-hint');
-        if (hint) hint.innerText = stack.classList.contains('show') ? 'Contraer' : 'Detalles';
     };
 
-    // --- SIMULATED LIVE MONITOR ---
+    // 4. FIXED: Simulated Live Monitor with 100%
     function updateSimulatedStatus() {
         const grid = document.getElementById('status-grid');
         const globalBadge = document.getElementById('status-global');
-        
+        if(!grid) return;
+
         const services = [
             { name: 'Proxmox Node', status: 'online' },
             { name: 'Immich', status: 'online' },
@@ -50,22 +64,21 @@ document.addEventListener('DOMContentLoaded', () => {
         services.forEach(s => {
             const item = document.createElement('div');
             item.className = 'status-item';
-            item.innerHTML = `<span class="status-dot ${s.status === 'online' ? 'status-online' : 'status-offline'}"></span> ${s.name}`;
+            item.innerHTML = `<span class="status-dot ${s.status === 'online' ? 'status-online' : 'status-offline'}"></span> <span class="service-name">${s.name}</span> <span class="service-uptime">100%</span>`;
             grid.appendChild(item);
         });
 
         globalBadge.innerText = 'All Systems Nominal';
-        globalBadge.style.color = '#00ff88';
     }
 
-    // Uptime Timer Simulation (Starting 8 months ago)
+    // 5. FIXED: Persistent Uptime Timer
     function updateUptime() {
-        const startTime = new Date();
-        startTime.setMonth(startTime.getMonth() - 8);
-        
         const timerElement = document.getElementById('uptime-timer');
+        if(!timerElement) return;
+
+        const startTime = new Date('2026-01-19T00:00:00'); 
         
-        setInterval(() => {
+        function tick() {
             const now = new Date();
             const diff = now - startTime;
             
@@ -75,7 +88,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const secs = Math.floor((diff / 1000) % 60);
             
             timerElement.innerText = `${days}d ${hours}h ${mins}m ${secs}s`;
-        }, 1000);
+        }
+
+        setInterval(tick, 1000);
+        tick();
     }
 
     updateSimulatedStatus();
