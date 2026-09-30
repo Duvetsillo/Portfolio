@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dayver Moreta | System Architect & AI Pioneer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -18,13 +21,15 @@
     <nav class="glass-nav">
         <div class="nav-logo">DM<span class="dot">.</span></div>
         <div class="nav-links">
-            <a href="#home">Inicio</a>
-            <a href="#about">Filosofía</a>
-            <a href="#homelab">Infraestructura</a>
-            <a href="#ai-ecosystem">IA Ecosystem</a>
-            <a href="#projects">Expertise</a>
+            <a href="#home" data-es="Inicio" data-en="Home">Inicio</a>
+            <a href="#about" data-es="Filosofía" data-en="Philosophy">Filosofía</a>
+            <a href="#homelab" data-es="Homelab" data-en="Homelab">Homelab</a>
+            <a href="#ai-ecosystem" data-es="Ecosistema IA" data-en="AI ecosystem">Ecosistema IA</a>
+            <a href="#projects" data-es="Proyectos" data-en="Projects">Proyectos</a>
+            <a href="#expertise" data-es="Experiencia" data-en="Expertise">Experiencia</a>
             <a href="#friday">F.R.I.D.A.Y.</a>
         </div>
+        <button class="language-toggle" id="language-toggle" type="button" aria-label="Switch to English" title="Switch to English">EN</button>
     </nav>
 
     <main class="container">
@@ -32,7 +37,7 @@
         <section id="home" class="glass-card hero">
             <div class="content">
                 <h1 class="gradient-text">Dayver Moreta</h1>
-                <p class="subtitle">System Architect & AI Pioneer | Especialista en Infraestructura, Virtualización y Agentes de IA Local</p>
+                <p class="subtitle" data-es="System Architect & AI Pioneer | Especialista en infraestructura, virtualización y agentes de IA local" data-en="System Architect & AI Pioneer | Infrastructure, virtualization and local AI agents specialist">System Architect & AI Pioneer | Especialista en infraestructura, virtualización y agentes de IA local</p>
                 <div class="social-links">
                     <a href="https://github.com/Duvetsillo" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/dayver-moreta-501771419/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
@@ -51,94 +56,82 @@
         <!-- PHILOSOPHY SECTION -->
         <section id="about" class="glass-card">
             <div class="content">
-                <h2 class="section-title"><i class="fas fa-lightbulb"></i> Filosofía de Ingeniería</h2>
-                <p>Mi enfoque se aleja de la teoría pasiva. Creo en la <strong class="accent">construcción iterativa</strong>: investigar un problema, diseñar la solución, romper el sistema y reconstruirlo con mayor eficiencia. Para mí, la programación no es el fin, sino la herramienta definitiva para resolver problemas reales, automatizar entornos complejos y crear sistemas autónomos que optimicen la vida digital.</p>
-                <p style="margin-top: 1rem; opacity: 0.8;">Busco la intersección perfecta entre la potencia del hardware y la inteligencia del software, priorizando la privacidad, la baja latencia y la soberanía tecnológica.</p>
+                <h2 class="section-title"><i class="fas fa-lightbulb"></i> <span data-es="Filosofía de Ingeniería" data-en="Engineering philosophy">Filosofía de Ingeniería</span></h2>
+                <p data-es-html="Mi enfoque se aleja de la teoría pasiva. Creo en la <strong class='accent'>construcción iterativa</strong>: investigar un problema, diseñar la solución, romper el sistema y reconstruirlo con mayor eficiencia. Para mí, la programación no es el fin, sino una herramienta para resolver problemas reales, automatizar entornos complejos y crear sistemas útiles." data-en-html="My approach goes beyond passive theory. I believe in <strong class='accent'>iterative building</strong>: investigate a problem, design a solution, break the system, then rebuild it more efficiently. Programming is not the end goal; it is a tool for solving real problems, automating complex environments and creating useful systems.">Mi enfoque se aleja de la teoría pasiva. Creo en la <strong class="accent">construcción iterativa</strong>: investigar un problema, diseñar la solución, romper el sistema y reconstruirlo con mayor eficiencia. Para mí, la programación no es el fin, sino la herramienta definitiva para resolver problemas reales, automatizar entornos complejos y crear sistemas autónomos que optimicen la vida digital.</p>
+                <p class="secondary-copy" data-es="Busco la intersección entre la potencia del hardware y la inteligencia del software, priorizando privacidad, baja latencia y soberanía tecnológica." data-en="I work at the intersection of hardware performance and software intelligence, prioritizing privacy, low latency and technological sovereignty.">Busco la intersección entre la potencia del hardware y la inteligencia del software, priorizando privacidad, baja latencia y soberanía tecnológica.</p>
             </div>
         </section>
 
         <!-- HOMELAB / INFRASTRUCTURE SECTION -->
         <section id="homelab" class="glass-card">
             <div class="content">
-                <h2 class="section-title"><i class="fas fa-server"></i> Infraestructura & Homelab</h2>
-                <p>Despliegue de un centro de datos doméstico avanzado basado en <strong class="accent">Proxmox VE</strong>, integrando flujos de trabajo entre Linux y Apple Silicon para maximizar la eficiencia computacional.</p>
+                <h2 class="section-title"><i class="fas fa-server"></i> <span data-es="Infraestructura & Homelab" data-en="Infrastructure & homelab">Infraestructura & Homelab</span></h2>
+                <p data-es-html="Despliegue de un entorno doméstico basado en <strong class='accent'>Proxmox VE</strong>, conectando flujos de trabajo Linux y Apple Silicon para explorar virtualización, servicios autoalojados y eficiencia computacional." data-en-html="A Proxmox VE-based home environment connecting Linux and Apple Silicon workflows to explore virtualization, self-hosted services and compute efficiency.">Despliegue de un entorno doméstico basado en <strong class="accent">Proxmox VE</strong>, conectando flujos de trabajo Linux y Apple Silicon para explorar virtualización, servicios autoalojados y eficiencia computacional.</p>
                 
                 <div class="status-panel">
                     <div class="status-header">
                         <div class="node-info">
                             <img src="proxmox (1).png" class="node-logo" alt="Proxmox Logo">
-                            <span class="status-title">System Health Monitor (Node-01)</span>
+                            <span class="status-title" data-es="Stack de infraestructura" data-en="Infrastructure stack">Stack de infraestructura</span>
                         </div>
-                        <span id="status-global" class="status-badge online">All Systems Nominal</span>
+                        <span class="status-badge" data-es="Vista ilustrativa" data-en="Illustrative view">Vista ilustrativa</span>
                     </div>
                     <div id="status-grid" class="status-grid">
                         <div class="status-item">
-                            <span class="status-dot online"></span> 
                             <span class="service-name">Proxmox VE</span>
-                            <span class="service-uptime">99.9%</span>
                         </div>
                         <div class="status-item">
-                            <span class="status-dot online"></span> 
                             <span class="service-name">Immich</span>
-                            <span class="service-uptime">98.2%</span>
                         </div>
                         <div class="status-item">
-                            <span class="status-dot online"></span> 
                             <span class="service-name">Jellyfin</span>
-                            <span class="service-uptime">99.5%</span>
                         </div>
                         <div class="status-item">
-                            <span class="status-dot online"></span> 
                             <span class="service-name">AdGuard Home</span>
-                            <span class="service-uptime">100%</span>
                         </div>
                         <div class="status-item">
-                            <span class="status-dot online"></span> 
                             <span class="service-name">Nextcloud</span>
-                            <span class="service-uptime">97.8%</span>
                         </div>
                         <div class="status-item">
-                            <span class="status-dot online"></span> 
                             <span class="service-name">Tailscale</span>
-                            <span class="service-uptime">100%</span>
                         </div>
                     </div>
                     <div class="uptime-counter">
-                        <i class="fas fa-clock"></i> 
-                        <span>Uptime: <span id="uptime-timer">0d 0h 0m 0s</span></span>
+                        <i class="fas fa-layer-group"></i>
+                        <span data-es="Servicios autoalojados · sin telemetría en vivo" data-en="Self-hosted services · no live telemetry">Servicios autoalojados · sin telemetría en vivo</span>
                     </div>
                 </div>
 
                 <div class="tech-grid">
                     <div class="tech-box" onclick="toggleStack('stack-virt')">
                         <i class="fas fa-layer-group"></i>
-                        <h3>Sistemas & Virtualización</h3>
+                        <h3 data-es="Sistemas & Virtualización" data-en="Systems & virtualization">Sistemas & Virtualización</h3>
                         <div id="stack-virt" class="stack-content hidden">
                             <div class="tags">
                                 <span>Proxmox VE</span><span>LXC</span><span>Docker</span><span>Ubuntu</span><span>Debian</span><span>Apple Silicon</span>
                             </div>
                         </div>
-                        <span class="expand-hint">Detalles</span>
+                        <span class="expand-hint" data-es="Detalles" data-en="Details">Detalles</span>
                     </div>
                     <div class="tech-box" onclick="toggleStack('stack-core')">
                         <i class="fas fa-cloud"></i>
-                        <h3 class="accent">Core Services</h3>
+                        <h3 class="accent" data-es="Servicios principales" data-en="Core services">Servicios principales</h3>
                         <div id="stack-core" class="stack-content hidden">
                             <div class="tags">
                                 <span>Immich</span><span>Jellyfin</span><span>AdGuard Home</span><span>Nextcloud</span><span>Tailscale</span>
                             </div>
                         </div>
-                        <span class="expand-hint">Detalles</span>
+                        <span class="expand-hint" data-es="Detalles" data-en="Details">Detalles</span>
                     </div>
                     <div class="tech-box" onclick="toggleStack('stack-media')">
                         <i class="fas fa-sync"></i>
-                        <h3>Media Automation</h3>
+                        <h3 data-es="Automatización multimedia" data-en="Media automation">Automatización multimedia</h3>
                         <div id="stack-media" class="stack-content hidden">
                             <div class="tags">
                                 <span>Sonarr</span><span>Radarr</span><span>Prowlarr</span><span>Bazarr</span><span>Seerr</span>
                             </div>
                         </div>
-                        <span class="expand-hint">Detalles</span>
+                        <span class="expand-hint" data-es="Detalles" data-en="Details">Detalles</span>
                     </div>
                 </div>
             </div>
@@ -147,8 +140,8 @@
         <!-- AI ECOSYSTEM SECTION -->
         <section id="ai-ecosystem" class="glass-card">
             <div class="content">
-                <h2 class="section-title"><i class="fas fa-microchip"></i> Ecosistema de IA Local</h2>
-                <p>Soberanía tecnológica a través de la implementación de LLMs y agentes autónomos ejecutados localmente, priorizando la privacidad, la latencia cero y el control total sobre los datos.</p>
+                <h2 class="section-title"><i class="fas fa-microchip"></i> <span data-es="Ecosistema de IA local" data-en="Local AI ecosystem">Ecosistema de IA local</span></h2>
+                <p data-es="Una evolución de asistentes locales que explora lenguaje natural, automatización y operación de sistemas con foco en privacidad y control de datos." data-en="An evolving set of local assistants exploring natural language, automation and systems operations with a focus on privacy and data control.">Una evolución de asistentes locales que explora lenguaje natural, automatización y operación de sistemas con foco en privacidad y control de datos.</p>
                 
                 <div class="ai-evolution">
                     <!-- KAREN -->
@@ -156,12 +149,12 @@
                         <div class="stage-header">
                             <div class="stage-icon"><i class="fas fa-seedling"></i></div>
                             <div class="stage-text">
-                                <h3 class="karen-title">KAREN <span class="tag-label">El Origen</span></h3>
-                                <p>La piedra angular del ecosistema. KAREN fue la primera implementación de un asistente personal real, diseñando la arquitectura de interacción natural y la primera capa de procesamiento de lenguaje natural (NLP) local. Representa la transición de la computación tradicional hacia la asistencia inteligente.</p>
+                                <h3 class="karen-title">KAREN <span class="tag-label" data-es="El origen" data-en="The beginning">El origen</span></h3>
+                                <p data-es="El primer experimento de asistente local: interacción en lenguaje natural, clasificación de intención y automatización de rutinas." data-en="The first local assistant experiment: natural-language interaction, intent classification and routine automation.">El primer experimento de asistente local: interacción en lenguaje natural, clasificación de intención y automatización de rutinas.</p>
                                 <div class="stage-details">
-                                    <span><i class="fas fa-check"></i> Arquitectura de NLP Primaria</span>
-                                    <span><i class="fas fa-check"></i> Automatización de Rutinas Base</span>
-                                    <span><i class="fas fa-check"></i> Gestión de Contexto Inicial</span>
+                                    <span><i class="fas fa-check"></i> <span data-es="Procesamiento de lenguaje natural" data-en="Natural language processing">Procesamiento de lenguaje natural</span></span>
+                                    <span><i class="fas fa-check"></i> <span data-es="Automatización de rutinas" data-en="Routine automation">Automatización de rutinas</span></span>
+                                    <span><i class="fas fa-check"></i> <span data-es="Gestión inicial de contexto" data-en="Early context handling">Gestión inicial de contexto</span></span>
                                 </div>
                             </div>
                         </div>
@@ -172,12 +165,12 @@
                         <div class="stage-header">
                             <div class="stage-icon"><i class="fas fa-shield-virus"></i></div>
                             <div class="stage-text">
-                                <h3 class="legacy-title">ULTRON <span class="tag-label">El Control</span></h3>
-                                <p>La etapa de autoridad sistémica y poder técnico. Centrado en la gestión táctica, la ejecución de comandos directos y la capacidad de interactuar con el hardware a nivel profundo.</p>
+                                <h3 class="legacy-title">ULTRON <span class="tag-label" data-es="La operación" data-en="Operations">La operación</span></h3>
+                                <p data-es="Un agente operativo enfocado en automatización, interacción con infraestructura y organización del conocimiento técnico." data-en="An operations-focused agent exploring automation, infrastructure interaction and technical knowledge management.">Un agente operativo enfocado en automatización, interacción con infraestructura y organización del conocimiento técnico.</p>
                                 <div class="stage-details">
-                                    <span><i class="fas fa-check"></i> Acceso Root & SSH</span>
-                                    <span><i class="fas fa-check"></i> Gestión de Contenedores</span>
-                                    <span><i class="fas fa-check"></i> Control de Infraestructura</span>
+                                    <span><i class="fas fa-check"></i> <span data-es="Automatización de operaciones" data-en="Operations automation">Automatización de operaciones</span></span>
+                                    <span><i class="fas fa-check"></i> <span data-es="Gestión de conocimiento en Obsidian" data-en="Obsidian knowledge management">Gestión de conocimiento en Obsidian</span></span>
+                                    <span><i class="fas fa-check"></i> <span data-es="Integración de infraestructura (en evolución)" data-en="Infrastructure integration (evolving)">Integración de infraestructura (en evolución)</span></span>
                                 </div>
                             </div>
                         </div>
@@ -188,12 +181,12 @@
                         <div class="stage-header">
                             <div class="stage-icon"><i class="fas fa-brain"></i></div>
                             <div class="stage-text">
-                                <h3 class="friday-title">F.R.I.D.A.Y. <span class="tag-label">La Orquestación</span></h3>
-                                <p>El estado actual del arte. Un agente operativo de alta precisión capaz de orquestar la infraestructura completa, monitorear la salud del sistema en tiempo real y proporcionar soporte técnico autónomo.</p>
+                                <h3 class="friday-title">F.R.I.D.A.Y. <span class="tag-label" data-es="El soporte" data-en="The support layer">El soporte</span></h3>
+                                <p data-es="Proyecto de asistente técnico orientado a la continuidad operativa, con memoria persistente y líneas de trabajo en voz y monitoreo." data-en="A technical-assistant project focused on operational continuity, persistent memory, and voice and monitoring capabilities.">Proyecto de asistente técnico orientado a la continuidad operativa, con memoria persistente y líneas de trabajo en voz y monitoreo.</p>
                                 <div class="stage-details">
-                                    <span><i class="fas fa-check"></i> Orquestación de Nodo</span>
-                                    <span><i class="fas fa-check"></i> Monitoreo Proactivo</span>
-                                    <span><i class="fas fa-check"></i> Capa de Razonamiento LLM avanzada</span>
+                                    <span><i class="fas fa-check"></i> <span data-es="Continuidad operativa" data-en="Operational continuity">Continuidad operativa</span></span>
+                                    <span><i class="fas fa-check"></i> <span data-es="Memoria persistente" data-en="Persistent memory">Memoria persistente</span></span>
+                                    <span><i class="fas fa-check"></i> <span data-es="Voz y monitoreo en evolución" data-en="Voice and monitoring in progress">Voz y monitoreo en evolución</span></span>
                                 </div>
                             </div>
                         </div>
@@ -202,43 +195,115 @@
             </div>
         </section>
 
-        <!-- OTHER PROJECTS -->
-        <section id="projects" class="glass-card">
+        <section id="projects" class="glass-card project-showcase">
             <div class="content">
-                <h2 class="section-title"><i class="fas fa-tools"></i> Expertise Técnica</h2>
+                <p class="section-kicker" data-es="TRABAJO SELECCIONADO · IA LOCAL · INFRAESTRUCTURA · AUTOMATIZACIÓN" data-en="SELECTED WORK · LOCAL AI · INFRASTRUCTURE · AUTOMATION">TRABAJO SELECCIONADO · IA LOCAL · INFRAESTRUCTURA · AUTOMATIZACIÓN</p>
+                <h2 class="section-title"><i class="fas fa-code-branch"></i> <span data-es="Proyectos" data-en="Projects">Proyectos</span></h2>
+                <p class="projects-intro" data-es="Una selección de herramientas, sistemas y experimentos construidos para resolver problemas concretos." data-en="A selection of tools, systems and experiments built to solve practical problems.">Una selección de herramientas, sistemas y experimentos construidos para resolver problemas concretos.</p>
+                <div class="project-catalog">
+                    <article class="catalog-card featured-project reveal">
+                        <div class="catalog-topline"><span class="catalog-index">01</span><span class="catalog-type" data-es="IA LOCAL · APLICACIÓN" data-en="LOCAL AI · APPLICATION">IA LOCAL · APLICACIÓN</span></div>
+                        <h3>Aetherion</h3>
+                        <p data-es="Benchmark local que perfila hardware, compara modelos Ollama y GGUF y guarda resultados reproducibles sin depender de servicios en la nube." data-en="A local benchmark that profiles hardware, compares Ollama and GGUF models, and stores reproducible results without relying on cloud services.">Benchmark local que perfila hardware, compara modelos Ollama y GGUF y guarda resultados reproducibles sin depender de servicios en la nube.</p>
+                        <div class="catalog-tags"><span>Python</span><span>Ollama</span><span>GGUF</span><span>Tkinter</span></div>
+                        <a class="repo-link" href="https://github.com/Duvetsillo/local-ai-benchmark" target="_blank" rel="noopener noreferrer"><span data-es="Ver repositorio" data-en="View repository">Ver repositorio</span><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    </article>
+                    <article class="catalog-card reveal">
+                        <div class="catalog-topline"><span class="catalog-index">02</span><span class="catalog-type" data-es="OBSERVABILIDAD · IA" data-en="OBSERVABILITY · AI">OBSERVABILIDAD · IA</span></div>
+                        <h3>AI-Log-Analyzer</h3>
+                        <p data-es="Analizador de registros de Linux, Docker y Proxmox que usa modelos locales para resumir errores y proponer pasos de diagnóstico." data-en="A log analyzer for Linux, Docker and Proxmox that uses local models to summarize errors and suggest diagnostic steps.">Analizador de registros de Linux, Docker y Proxmox que usa modelos locales para resumir errores y proponer pasos de diagnóstico.</p>
+                        <div class="catalog-tags"><span>Python</span><span>Ollama</span><span>Linux</span></div>
+                    </article>
+                    <article class="catalog-card reveal">
+                        <div class="catalog-topline"><span class="catalog-index">03</span><span class="catalog-type" data-es="REDES · AUTOMATIZACIÓN" data-en="NETWORKING · AUTOMATION">REDES · AUTOMATIZACIÓN</span></div>
+                        <h3>Tailscale-AutoConfig</h3>
+                        <p data-es="Automatiza el despliegue de Tailscale en contenedores LXC de Proxmox para facilitar redes privadas entre nodos." data-en="Automates Tailscale deployment in Proxmox LXC containers to simplify private networking between nodes.">Automatiza el despliegue de Tailscale en contenedores LXC de Proxmox para facilitar redes privadas entre nodos.</p>
+                        <div class="catalog-tags"><span>Bash</span><span>Tailscale</span><span>Proxmox</span></div>
+                    </article>
+                    <article class="catalog-card reveal">
+                        <div class="catalog-topline"><span class="catalog-index">04</span><span class="catalog-type" data-es="OBSERVABILIDAD · HOMELAB" data-en="OBSERVABILITY · HOMELAB">OBSERVABILIDAD · HOMELAB</span></div>
+                        <h3>Home-Ops Dashboard</h3>
+                        <p data-es="Panel web adaptable para reunir comprobaciones de salud y estado de servicios del homelab." data-en="A responsive web dashboard for bringing homelab service health checks and status into one view.">Panel web adaptable para reunir comprobaciones de salud y estado de servicios del homelab.</p>
+                        <div class="catalog-tags"><span>JavaScript</span><span>Python</span><span>Proxmox</span></div>
+                    </article>
+                    <article class="catalog-card reveal">
+                        <div class="catalog-topline"><span class="catalog-index">05</span><span class="catalog-type" data-es="IA LOCAL · RECURSOS" data-en="LOCAL AI · RESOURCES">IA LOCAL · RECURSOS</span></div>
+                        <h3>Local-LLM-Prompt-Library</h3>
+                        <p data-es="Colección de prompts para diagnóstico, scripting, diseño de arquitectura y seguridad con modelos de lenguaje locales." data-en="A prompt collection for troubleshooting, scripting, architecture design and security with local language models.">Colección de prompts para diagnóstico, scripting, diseño de arquitectura y seguridad con modelos de lenguaje locales.</p>
+                        <div class="catalog-tags"><span>LLMs</span><span>Prompt design</span><span>Linux</span></div>
+                    </article>
+                    <article class="catalog-card reveal">
+                        <div class="catalog-topline"><span class="catalog-index">06</span><span class="catalog-type" data-es="DOMÓTICA · ALERTAS" data-en="SMART HOME · ALERTS">DOMÓTICA · ALERTAS</span></div>
+                        <h3>Home-Assistant-Notifier</h3>
+                        <p data-es="Conecta la monitorización de infraestructura con Home Assistant para enviar alertas locales ante fallos de servicios." data-en="Connects infrastructure monitoring to Home Assistant to deliver local alerts when services fail.">Conecta la monitorización de infraestructura con Home Assistant para enviar alertas locales ante fallos de servicios.</p>
+                        <div class="catalog-tags"><span>Home Assistant</span><span>REST API</span><span>Monitoring</span></div>
+                    </article>
+                    <article class="catalog-card reveal">
+                        <div class="catalog-topline"><span class="catalog-index">07</span><span class="catalog-type" data-es="SISTEMAS · DOCUMENTACIÓN" data-en="SYSTEMS · DOCUMENTATION">SISTEMAS · DOCUMENTACIÓN</span></div>
+                        <h3>Hardware-Inventory-Automator</h3>
+                        <p data-es="Script de auditoría que recoge datos de CPU, memoria, almacenamiento y GPU y genera inventarios Markdown reproducibles." data-en="An audit script that collects CPU, memory, storage and GPU details and generates reproducible Markdown inventories.">Script de auditoría que recoge datos de CPU, memoria, almacenamiento y GPU y genera inventarios Markdown reproducibles.</p>
+                        <div class="catalog-tags"><span>Bash</span><span>Linux</span><span>Markdown</span></div>
+                    </article>
+                    <article class="catalog-card reveal">
+                        <div class="catalog-topline"><span class="catalog-index">08</span><span class="catalog-type" data-es="ASISTENTE · IA LOCAL" data-en="ASSISTANT · LOCAL AI">ASISTENTE · IA LOCAL</span></div>
+                        <h3>KAREN Assistant</h3>
+                        <p data-es="Asistente experimental de voz y lenguaje natural local, con automatización de rutinas y gestión inicial del contexto." data-en="An experimental local voice and natural-language assistant with routine automation and early context handling.">Asistente experimental de voz y lenguaje natural local, con automatización de rutinas y gestión inicial del contexto.</p>
+                        <div class="catalog-tags"><span>Python</span><span>Local LLM</span><span>Voice</span></div>
+                        <a class="repo-link" href="https://github.com/Duvetsillo/Karen-assitant" target="_blank" rel="noopener noreferrer"><span data-es="Ver repositorio" data-en="View repository">Ver repositorio</span><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    </article>
+                    <article class="catalog-card reveal">
+                        <div class="catalog-topline"><span class="catalog-index">09</span><span class="catalog-type" data-es="AGENTE · CONOCIMIENTO" data-en="AGENT · KNOWLEDGE">AGENTE · CONOCIMIENTO</span></div>
+                        <h3>ULTRON</h3>
+                        <p data-es="Agente operativo concebido para automatización técnica y conexión de flujos de trabajo con Obsidian." data-en="An operations agent designed for technical automation and connecting workflows with Obsidian.">Agente operativo concebido para automatización técnica y conexión de flujos de trabajo con Obsidian.</p>
+                        <div class="catalog-tags"><span>Automation</span><span>Obsidian</span><span>Infrastructure</span></div>
+                    </article>
+                    <article class="catalog-card reveal">
+                        <div class="catalog-topline"><span class="catalog-index">10</span><span class="catalog-type" data-es="ASISTENTE · OPERACIONES" data-en="ASSISTANT · OPERATIONS">ASISTENTE · OPERACIONES</span></div>
+                        <h3>F.R.I.D.A.Y.</h3>
+                        <p data-es="Proyecto de asistente técnico personal centrado en continuidad, memoria persistente, voz y supervisión de infraestructura." data-en="A personal technical-assistant project centered on continuity, persistent memory, voice and infrastructure monitoring.">Proyecto de asistente técnico personal centrado en continuidad, memoria persistente, voz y supervisión de infraestructura.</p>
+                        <div class="catalog-tags"><span>Local AI</span><span>Memory</span><span>Monitoring</span></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- OTHER PROJECTS -->
+        <section id="expertise" class="glass-card">
+            <div class="content">
+                <h2 class="section-title"><i class="fas fa-tools"></i> <span data-es="Experiencia técnica" data-en="Technical expertise">Experiencia técnica</span></h2>
                 <div class="project-grid">
                     <div class="project-item" onclick="toggleStack('stack-domo')">
                         <div class="project-icon"><i class="fas fa-home"></i></div>
-                        <h3>Domótica Inteligente</h3>
-                        <p>Centralización via Home Assistant, integrando hardware ESP32 y automatizaciones inteligentes.</p>
+                        <h3 data-es="Domótica inteligente" data-en="Smart home">Domótica inteligente</h3>
+                        <p data-es="Centralización con Home Assistant, hardware ESP32 y automatizaciones." data-en="Centralized smart-home workflows with Home Assistant, ESP32 hardware and automations.">Centralización con Home Assistant, hardware ESP32 y automatizaciones.</p>
                         <div id="stack-domo" class="stack-content hidden">
                             <div class="tags">
                                 <span>Home Assistant</span><span>HACS</span><span>ESP32</span><span>Alexa</span><span>Apple Ecosystem</span>
                             </div>
                         </div>
-                        <span class="expand-hint">Detalles</span>
+                        <span class="expand-hint" data-es="Detalles" data-en="Details">Detalles</span>
                     </div>
                     <div class="project-item" onclick="toggleStack('stack-net')">
                         <div class="project-icon"><i class="fas fa-network-wired"></i></div>
-                        <h3>Infraestructura de Red</h3>
-                        <p>Sistemas UniFi, DNS filtrados y redes privadas meshes mediante Tailscale.</p>
+                        <h3 data-es="Infraestructura de red" data-en="Network infrastructure">Infraestructura de red</h3>
+                        <p data-es="Redes UniFi, filtrado DNS y redes privadas con Tailscale." data-en="UniFi networks, filtered DNS and private networking with Tailscale.">Redes UniFi, filtrado DNS y redes privadas con Tailscale.</p>
                         <div id="stack-net" class="stack-content hidden">
                             <div class="tags">
                                 <span>UniFi</span><span>AdGuard Home</span><span>Tailscale</span><span>VPN</span><span>DNS</span>
                             </div>
                         </div>
-                        <span class="expand-hint">Detalles</span>
+                        <span class="expand-hint" data-es="Detalles" data-en="Details">Detalles</span>
                     </div>
                     <div class="project-item" onclick="toggleStack('stack-hard')">
                         <div class="project-icon"><i class="fas fa-memory"></i></div>
-                        <h3>Hardware Tuning l PC Building</h3>
-                        <p>Optimización de estaciones de trabajo, gestión térmica avanzada y overclocking estable en plataformas AMD/NVIDIA.</p>
+                        <h3 data-es="Optimización y montaje de PC" data-en="PC building & tuning">Optimización y montaje de PC</h3>
+                        <p data-es="Optimización de estaciones de trabajo, gestión térmica y overclocking estable en plataformas AMD/NVIDIA." data-en="Workstation optimization, thermal management and stable overclocking on AMD/NVIDIA platforms.">Optimización de estaciones de trabajo, gestión térmica y overclocking estable en plataformas AMD/NVIDIA.</p>
                         <div id="stack-hard" class="stack-content hidden">
                             <div class="tags">
                                 <span>AMD Ryzen</span><span>NVIDIA RTX</span><span>Thermal Modding</span><span>Overclocking</span>
                             </div>
                         </div>
-                        <span class="expand-hint">Detalles</span>
+                        <span class="expand-hint" data-es="Detalles" data-en="Details">Detalles</span>
                     </div>
                 </div>
             </div>
@@ -251,25 +316,25 @@
                 <div class="friday-detail-grid">
                     <div class="detail-item">
                         <i class="fas fa-terminal"></i>
-                        <h3>Gestión Operativa</h3>
-                        <p>Capacidad de interactuar directamente con la terminal del servidor, ejecutar scripts de mantenimiento y diagnosticar fallos en tiempo real.</p>
+                        <h3 data-es="Gestión operativa" data-en="Operations">Gestión operativa</h3>
+                        <p data-es="Asistencia para tareas técnicas, automatización y diagnóstico de sistemas." data-en="Assistance with technical tasks, automation and systems troubleshooting.">Asistencia para tareas técnicas, automatización y diagnóstico de sistemas.</p>
                     </div>
                     <div class="detail-item">
                         <i class="fas fa-chart-line"></i>
-                        <h3>Monitoreo Autónomo</h3>
-                        <p>Vigilancia constante de la salud de los CTs, consumo de recursos y alertas preventivas ante caídas de servicios críticos.</p>
+                        <h3 data-es="Monitoreo" data-en="Monitoring">Monitoreo</h3>
+                        <p data-es="Línea de trabajo para observar servicios e infraestructura y detectar incidencias." data-en="A workstream for observing services and infrastructure and surfacing incidents.">Línea de trabajo para observar servicios e infraestructura y detectar incidencias.</p>
                     </div>
                     <div class="detail-item">
                         <i class="fas fa-user-shield"></i>
-                        <h3>Soporte Técnico</h3>
-                        <p>Asistente especializado en la resolución de problemas de infraestructura, redes y despliegue de contenedores.</p>
+                        <h3 data-es="Soporte técnico" data-en="Technical support">Soporte técnico</h3>
+                        <p data-es="Enfoque en continuidad, documentación y resolución de problemas técnicos." data-en="Focused on continuity, documentation and technical problem solving.">Enfoque en continuidad, documentación y resolución de problemas técnicos.</p>
                     </div>
                 </div>
                 <div class="friday-footer">
                     <div class="friday-status">
-                        <span class="status-dot"></span> Online & Operational
+                        <span class="status-dot"></span> <span data-es="Proyecto personal en evolución" data-en="Personal project in progress">Proyecto personal en evolución</span>
                     </div>
-                    <p class="friday-tagline">"Soberanía tecnológica a través de la inteligencia local."</p>
+                    <p class="friday-tagline" data-es="“Soberanía tecnológica a través de la inteligencia local.”" data-en="“Technological sovereignty through local intelligence.”">“Soberanía tecnológica a través de la inteligencia local.”</p>
                 </div>
             </div>
         </section>

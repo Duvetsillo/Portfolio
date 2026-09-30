@@ -1,100 +1,56 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Smooth Scroll Reveal
-    const revealElements = document.querySelectorAll('.reveal');
-    const revealOnScroll = () => {
-        const triggerBottom = window.innerHeight * 0.85;
-        revealElements.forEach(el => {
-            const elementTop = el.getBoundingClientRect().top;
-            if (elementTop < triggerBottom) {
-                el.classList.add('active');
-            }
+    const languageToggle = document.getElementById('language-toggle');
+    const languageItems = document.querySelectorAll('[data-es], [data-en], [data-es-html], [data-en-html]');
+    const setLanguage = (language) => {
+        document.documentElement.lang = language;
+        languageItems.forEach((item) => {
+            const translatedHtml = item.dataset[`${language}Html`];
+            const translatedText = item.dataset[language];
+            if (translatedHtml) item.innerHTML = translatedHtml;
+            else if (translatedText) item.textContent = translatedText;
         });
+
+        if (languageToggle) {
+            const nextLanguage = language === 'es' ? 'en' : 'es';
+            const action = language === 'es' ? 'Switch to English' : 'Cambiar a español';
+            languageToggle.textContent = nextLanguage.toUpperCase();
+            languageToggle.setAttribute('aria-label', action);
+            languageToggle.title = action;
+        }
+
+        try { localStorage.setItem('portfolio-language', language); } catch {}
     };
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll();
 
-    // 2. Ultra-Smooth 3D Parallax
-    const cards = document.querySelectorAll('.glass-card, .matrix-item, .exp-card, .f-item');
-    let mouseX = 0, mouseY = 0, currentX = 0, currentY = 0;
+    let savedLanguage = '';
+    try { savedLanguage = localStorage.getItem('portfolio-language') || ''; } catch {}
+    const initialLanguage = savedLanguage || (navigator.language.toLowerCase().startsWith('en') ? 'en' : 'es');
+    setLanguage(initialLanguage);
 
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
+    languageToggle?.addEventListener('click', () => {
+        setLanguage(document.documentElement.lang === 'es' ? 'en' : 'es');
     });
 
-    function animate() {
-        currentX += (mouseX - currentX) * 0.1;
-        currentY += (mouseY - currentY) * 0.1;
-
-        cards.forEach(card => {
-            const rect = card.getBoundingClientRect();
-            const cardX = rect.left + rect.width / 2;
-            const cardY = rect.top + rect.height / 2;
-            const rotateX = (currentY - cardY) / 150;
-            const rotateY = (cardX - currentX) / 150;
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-        });
-        requestAnimationFrame(animate);
+    const revealElements = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.body.classList.add('js-ready');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        revealElements.forEach((element) => revealObserver.observe(element));
+    } else {
+        revealElements.forEach((element) => element.classList.add('active'));
     }
-    animate();
 
-    // 3. Fluid Stack Toggle
+    // Fluid stack toggle
     window.toggleStack = function(stackId) {
         const stack = document.getElementById(stackId);
         if (!stack) return;
         stack.classList.toggle('show');
     };
 
-    // 4. CLEANED: Simulated Live Monitor (Removed percentages)
-    function updateSimulatedStatus() {
-        const grid = document.getElementById('status-grid');
-        const globalBadge = document.getElementById('status-global');
-        if(!grid) return;
-
-        const services = [
-            { name: 'Proxmox Node', status: 'online' },
-            { name: 'Immich', status: 'online' },
-            { name: 'Jellyfin', status: 'online' },
-            { name: 'AdGuard Home', status: 'online' },
-            { name: 'Nextcloud', status: 'online' },
-            { name: 'Tailscale', status: 'online' },
-        ];
-
-        grid.innerHTML = '';
-        services.forEach(s => {
-            const item = document.createElement('div');
-            item.className = 'status-item';
-            // Removed the uptime percentage entirely
-            item.innerHTML = `<span class="status-dot ${s.status === 'online' ? 'status-online' : 'status-offline'}"></span> <span class="service-name">${s.name}</span>`;
-            grid.appendChild(item);
-        });
-
-        globalBadge.innerText = 'All Systems Nominal';
-    }
-
-    // 5. Persistent Absolute Uptime Timer
-    function updateUptime() {
-        const timerElement = document.getElementById('uptime-timer');
-        if(!timerElement) return;
-
-        const startTime = new Date('2026-01-19T00:00:00'); 
-        
-        function tick() {
-            const now = new Date();
-            const diff = now - startTime;
-            
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-            const mins = Math.floor((diff / (1000 * 60)) % 60);
-            const secs = Math.floor((diff / 1000) % 60);
-            
-            timerElement.innerText = `${days}d ${hours}h ${mins}m ${secs}s`;
-        }
-
-        setInterval(tick, 1000);
-        tick();
-    }
-
-    updateSimulatedStatus();
-    updateUptime();
 });
