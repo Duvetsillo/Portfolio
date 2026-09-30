@@ -12,12 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="smooth-scroll">
-    <div class="background-container">
-        <div class="blob"></div>
-        <div class="blob"></div>
-        <div class="blob"></div>
-    </div>
-
     <nav class="glass-nav">
         <div class="nav-logo">DM<span class="dot">.</span></div>
         <div class="nav-links">
@@ -47,6 +41,7 @@
                     <span class="badge">Apple Silicon</span>
                     <span class="badge">Proxmox VE</span>
                     <span class="badge">Local LLMs</span>
+                    <span class="badge">TypeScript</span>
                     <span class="badge">Docker & K8s</span>
                     <span class="badge">Network Engineering</span>
                 </div>
@@ -59,6 +54,12 @@
                 <h2 class="section-title"><i class="fas fa-lightbulb"></i> <span data-es="Filosofía de Ingeniería" data-en="Engineering philosophy">Filosofía de Ingeniería</span></h2>
                 <p data-es-html="Mi enfoque se aleja de la teoría pasiva. Creo en la <strong class='accent'>construcción iterativa</strong>: investigar un problema, diseñar la solución, romper el sistema y reconstruirlo con mayor eficiencia. Para mí, la programación no es el fin, sino una herramienta para resolver problemas reales, automatizar entornos complejos y crear sistemas útiles." data-en-html="My approach goes beyond passive theory. I believe in <strong class='accent'>iterative building</strong>: investigate a problem, design a solution, break the system, then rebuild it more efficiently. Programming is not the end goal; it is a tool for solving real problems, automating complex environments and creating useful systems.">Mi enfoque se aleja de la teoría pasiva. Creo en la <strong class="accent">construcción iterativa</strong>: investigar un problema, diseñar la solución, romper el sistema y reconstruirlo con mayor eficiencia. Para mí, la programación no es el fin, sino la herramienta definitiva para resolver problemas reales, automatizar entornos complejos y crear sistemas autónomos que optimicen la vida digital.</p>
                 <p class="secondary-copy" data-es="Busco la intersección entre la potencia del hardware y la inteligencia del software, priorizando privacidad, baja latencia y soberanía tecnológica." data-en="I work at the intersection of hardware performance and software intelligence, prioritizing privacy, low latency and technological sovereignty.">Busco la intersección entre la potencia del hardware y la inteligencia del software, priorizando privacidad, baja latencia y soberanía tecnológica.</p>
+                <p class="philosophy-detail" data-es="Antes de añadir complejidad, intento entender el contexto, medir el problema y elegir una solución segura que pueda mantenerse. La tecnología debe dar autonomía y control, no solo sumar herramientas." data-en="Before adding complexity, I try to understand the context, measure the problem and choose a secure solution that can be maintained. Technology should create autonomy and control, not just add more tools.">Antes de añadir complejidad, intento entender el contexto, medir el problema y elegir una solución segura que pueda mantenerse. La tecnología debe dar autonomía y control, no solo sumar herramientas.</p>
+                <div class="philosophy-principles" aria-label="Engineering principles">
+                    <div class="principle"><i class="fas fa-shield-halved" aria-hidden="true"></i><span data-es="Privacidad por defecto" data-en="Privacy by default">Privacidad por defecto</span></div>
+                    <div class="principle"><i class="fas fa-ruler-combined" aria-hidden="true"></i><span data-es="Medir antes de optimizar" data-en="Measure before optimizing">Medir antes de optimizar</span></div>
+                    <div class="principle"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i><span data-es="Sistemas mantenibles" data-en="Maintainable systems">Sistemas mantenibles</span></div>
+                </div>
             </div>
         </section>
 
@@ -72,33 +73,51 @@
                     <div class="status-header">
                         <div class="node-info">
                             <img src="proxmox (1).png" class="node-logo" alt="Proxmox Logo">
-                            <span class="status-title" data-es="Stack de infraestructura" data-en="Infrastructure stack">Stack de infraestructura</span>
+                            <span class="status-title">System Health Monitor (Node-01)</span>
                         </div>
-                        <span class="status-badge" data-es="Vista ilustrativa" data-en="Illustrative view">Vista ilustrativa</span>
+                        <span class="status-badge online">All Systems Nominal</span>
                     </div>
                     <div id="status-grid" class="status-grid">
                         <div class="status-item">
-                            <span class="service-name">Proxmox VE</span>
-                        </div>
-                        <div class="status-item">
-                            <span class="service-name">Immich</span>
-                        </div>
-                        <div class="status-item">
-                            <span class="service-name">Jellyfin</span>
-                        </div>
-                        <div class="status-item">
-                            <span class="service-name">AdGuard Home</span>
-                        </div>
-                        <div class="status-item">
+                            <span class="status-dot online"></span>
                             <span class="service-name">Nextcloud</span>
                         </div>
                         <div class="status-item">
-                            <span class="service-name">Tailscale</span>
+                            <span class="status-dot online"></span>
+                            <span class="service-name">Ollama</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot online"></span>
+                            <span class="service-name">Hermes</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot online"></span>
+                            <span class="service-name">UniFi Server</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot online"></span>
+                            <span class="service-name">Docker</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot online"></span>
+                            <span class="service-name">OpenMediaVault</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot online"></span>
+                            <span class="service-name">Pi-hole</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot online"></span>
+                            <span class="service-name">AdGuard</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot online"></span>
+                            <span class="service-name">Jellyfin</span>
                         </div>
                     </div>
                     <div class="uptime-counter">
-                        <i class="fas fa-layer-group"></i>
-                        <span data-es="Servicios autoalojados · sin telemetría en vivo" data-en="Self-hosted services · no live telemetry">Servicios autoalojados · sin telemetría en vivo</span>
+                        <i class="fas fa-clock"></i>
+                        <span>Uptime: <span id="uptime-timer">254d 19h 46m 55s</span></span>
                     </div>
                 </div>
 
@@ -145,7 +164,7 @@
                 
                 <div class="ai-evolution">
                     <!-- KAREN -->
-                    <div class="ai-stage genesis">
+                    <div class="ai-stage genesis reveal">
                         <div class="stage-header">
                             <div class="stage-icon"><i class="fas fa-seedling"></i></div>
                             <div class="stage-text">
@@ -161,7 +180,7 @@
                     </div>
                     
                     <!-- ULTRON -->
-                    <div class="ai-stage legacy">
+                    <div class="ai-stage legacy reveal">
                         <div class="stage-header">
                             <div class="stage-icon"><i class="fas fa-shield-virus"></i></div>
                             <div class="stage-text">
@@ -177,7 +196,7 @@
                     </div>
                     
                     <!-- FRIDAY -->
-                    <div class="ai-stage current">
+                    <div class="ai-stage current reveal">
                         <div class="stage-header">
                             <div class="stage-icon"><i class="fas fa-brain"></i></div>
                             <div class="stage-text">

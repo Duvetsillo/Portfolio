@@ -53,4 +53,20 @@ document.addEventListener('DOMContentLoaded', () => {
         stack.classList.toggle('show');
     };
 
+    const uptimeTimer = document.getElementById('uptime-timer');
+    if (uptimeTimer) {
+        const startedAt = new Date('2026-01-19T00:00:00');
+        const updateUptime = () => {
+            const elapsedSeconds = Math.max(0, Math.floor((Date.now() - startedAt.getTime()) / 1000));
+            const days = Math.floor(elapsedSeconds / 86400);
+            const hours = Math.floor((elapsedSeconds % 86400) / 3600);
+            const minutes = Math.floor((elapsedSeconds % 3600) / 60);
+            const seconds = elapsedSeconds % 60;
+            uptimeTimer.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        };
+
+        updateUptime();
+        window.setInterval(updateUptime, 1000);
+    }
+
 });
