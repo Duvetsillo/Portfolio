@@ -26,6 +26,42 @@ document.addEventListener('DOMContentLoaded', () => {
     const initialLanguage = savedLanguage || (navigator.language.toLowerCase().startsWith('en') ? 'en' : 'es');
     setLanguage(initialLanguage);
 
+    const fridayTypeText = document.querySelector('.friday-type-text');
+    const startFridayTyping = () => {
+        if (!fridayTypeText || fridayTypeText.dataset.typingStarted === 'true') return;
+        fridayTypeText.dataset.typingStarted = 'true';
+        fridayTypeText.classList.add('is-typing');
+        const text = fridayTypeText.textContent || '';
+        fridayTypeText.textContent = '';
+        let characterIndex = 0;
+
+        const typeNextCharacter = () => {
+            characterIndex += 1;
+            fridayTypeText.textContent = text.slice(0, characterIndex);
+            if (characterIndex < text.length) {
+                window.setTimeout(typeNextCharacter, 155);
+            } else {
+                fridayTypeText.classList.remove('is-typing');
+            }
+        };
+
+        window.setTimeout(typeNextCharacter, 350);
+    };
+
+    if (fridayTypeText && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const startWhenScrolledIntoView = () => {
+            if (fridayTypeText.dataset.typingStarted === 'true') return;
+            const bounds = fridayTypeText.getBoundingClientRect();
+            const isVisible = bounds.top < window.innerHeight * 0.85 && bounds.bottom > window.innerHeight * 0.15;
+            if (isVisible) {
+                startFridayTyping();
+                window.removeEventListener('scroll', startWhenScrolledIntoView);
+            }
+        };
+
+        window.addEventListener('scroll', startWhenScrolledIntoView, { passive: true });
+    }
+
     languageToggle?.addEventListener('click', () => {
         setLanguage(document.documentElement.lang === 'es' ? 'en' : 'es');
     });
