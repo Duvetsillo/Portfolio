@@ -79,15 +79,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealElements = document.querySelectorAll('.reveal');
     if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         document.body.classList.add('js-ready');
+        let userHasScrolled = false;
+        const revealVisibleElements = () => {
+            userHasScrolled = true;
+            revealElements.forEach((element) => {
+                const bounds = element.getBoundingClientRect();
+                const isVisible = bounds.top < window.innerHeight * 0.9 && bounds.bottom > window.innerHeight * 0.1;
+                if (isVisible) element.classList.add('active');
+            });
+
+            const aiEvolution = document.querySelector('.ai-evolution');
+            if (aiEvolution) {
+                const bounds = aiEvolution.getBoundingClientRect();
+                if (bounds.top < window.innerHeight * 0.95 && bounds.bottom > 0) {
+                    aiEvolution.classList.add('is-visible');
+                    aiEvolution.querySelectorAll('.ai-stage').forEach((stage) => {
+                        stage.classList.add('active');
+                        revealObserver?.unobserve(stage);
+                    });
+                }
+            }
+        };
+
         const revealObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach((entry) => {
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting && userHasScrolled) {
                     entry.target.classList.add('active');
                     observer.unobserve(entry.target);
                 }
             });
         }, { threshold: 0.12 });
         revealElements.forEach((element) => revealObserver.observe(element));
+        window.addEventListener('scroll', revealVisibleElements, { passive: true });
     } else {
         revealElements.forEach((element) => element.classList.add('active'));
     }

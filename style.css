@@ -658,6 +658,9 @@ section {
     background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
     box-shadow: 0 0 12px rgba(228, 228, 228, 0.22);
     content: "";
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: center;
 }
 
 .ai-core {
@@ -678,7 +681,16 @@ section {
     letter-spacing: 0.08em;
     text-transform: uppercase;
     box-shadow: 0 0 24px rgba(0, 255, 136, 0.1), inset 0 0 18px rgba(0, 255, 136, 0.06);
-    animation: corePulse 3.2s ease-in-out infinite;
+    opacity: 0;
+    transform: translateY(-12px) scale(0.9);
+}
+
+.ai-evolution.is-visible .ai-core {
+    animation: coreDeploy 0.65s var(--ease-out) both, corePulse 3.2s ease-in-out 0.9s infinite;
+}
+
+.ai-evolution.is-visible::before {
+    animation: connectorReveal 0.75s ease-out 2.65s both;
 }
 
 .ai-core i {
@@ -727,7 +739,20 @@ section {
     height: 20px;
     background: linear-gradient(var(--accent-color), transparent);
     content: "";
+    opacity: 0;
     transform: translateX(-50%);
+}
+
+.js-ready .ai-evolution .ai-stage:nth-child(2)::after {
+    animation: branchConnectorReveal 0.45s ease-out 1.35s both;
+}
+
+.js-ready .ai-evolution .ai-stage:nth-child(3)::after {
+    animation: branchConnectorReveal 0.45s ease-out 1.8s both;
+}
+
+.js-ready .ai-evolution .ai-stage:nth-child(4)::after {
+    animation: branchConnectorReveal 0.45s ease-out 2.25s both;
 }
 
 .stage-header {
@@ -812,8 +837,9 @@ section {
 .legacy { border-left: 3px solid #4b535a; }
 .current { border-left: 3px solid var(--accent-color); }
 
-.ai-evolution .ai-stage:nth-child(2) { transition-delay: 80ms; }
-.ai-evolution .ai-stage:nth-child(3) { transition-delay: 150ms; }
+.js-ready .ai-evolution .ai-stage:nth-child(2) { transition-delay: 0.9s; }
+.js-ready .ai-evolution .ai-stage:nth-child(3) { transition-delay: 1.35s; }
+.js-ready .ai-evolution .ai-stage:nth-child(4) { transition-delay: 1.8s; }
 
 @media (max-width: 900px) {
     .ai-evolution {
@@ -829,6 +855,11 @@ section {
         left: 7px;
         width: 1px;
         height: auto;
+        transform-origin: top;
+    }
+
+    .ai-evolution.is-visible::before {
+        animation-name: connectorRevealVertical;
     }
 
     .ai-core {
@@ -1044,6 +1075,18 @@ h2.friday-title {
     animation: stageIconPop 0.65s var(--ease-out) 0.12s both;
 }
 
+.js-ready .ai-evolution .ai-stage:nth-child(2) .stage-icon {
+    animation-delay: 1.02s;
+}
+
+.js-ready .ai-evolution .ai-stage:nth-child(3) .stage-icon {
+    animation-delay: 1.47s;
+}
+
+.js-ready .ai-evolution .ai-stage:nth-child(4) .stage-icon {
+    animation-delay: 1.92s;
+}
+
 .js-ready .ai-stage.active .tag-label {
     animation: tagLabelReveal 0.45s ease-out 0.3s both;
 }
@@ -1236,6 +1279,44 @@ h2.friday-title {
 @keyframes corePulse {
     0%, 100% { box-shadow: 0 0 24px rgba(0, 255, 136, 0.1), inset 0 0 18px rgba(0, 255, 136, 0.06); }
     50% { box-shadow: 0 0 34px rgba(0, 255, 136, 0.2), inset 0 0 22px rgba(0, 255, 136, 0.1); }
+}
+
+@keyframes coreDeploy {
+    from {
+        opacity: 0;
+        transform: translateY(-12px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes connectorReveal {
+    from {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes connectorRevealVertical {
+    from {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+    to {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+@keyframes branchConnectorReveal {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes navDrop {
@@ -1452,6 +1533,15 @@ h2.friday-title {
 
     .ai-core {
         animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .ai-evolution::before,
+    .ai-stage::after {
+        animation: none;
+        opacity: 1;
+        transform: none;
     }
 
     .status-panel::before,
