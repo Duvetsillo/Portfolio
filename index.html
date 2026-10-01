@@ -122,7 +122,7 @@
                 </div>
 
                 <div class="tech-grid">
-                    <div class="tech-box" onclick="toggleStack('stack-virt')">
+                    <div class="tech-box" role="button" tabindex="0" data-stack-target="stack-virt" aria-expanded="false" onclick="toggleStack('stack-virt')">
                         <i class="fas fa-layer-group"></i>
                         <h3 data-es="Sistemas & Virtualización" data-en="Systems & virtualization">Sistemas & Virtualización</h3>
                         <div id="stack-virt" class="stack-content hidden">
@@ -130,9 +130,9 @@
                                 <span>Proxmox VE</span><span>LXC</span><span>Docker</span><span>Ubuntu</span><span>Debian</span><span>Apple Silicon</span>
                             </div>
                         </div>
-                        <span class="expand-hint" data-es="Detalles" data-en="Details">Detalles</span>
+                        <span class="expand-hint" data-es="Abrir detalles" data-en="Open details">Abrir detalles</span>
                     </div>
-                    <div class="tech-box" onclick="toggleStack('stack-core')">
+                    <div class="tech-box" role="button" tabindex="0" data-stack-target="stack-core" aria-expanded="false" onclick="toggleStack('stack-core')">
                         <i class="fas fa-cloud"></i>
                         <h3 class="accent" data-es="Servicios principales" data-en="Core services">Servicios principales</h3>
                         <div id="stack-core" class="stack-content hidden">
@@ -140,9 +140,9 @@
                                 <span>Immich</span><span>Jellyfin</span><span>AdGuard Home</span><span>Nextcloud</span><span>Tailscale</span>
                             </div>
                         </div>
-                        <span class="expand-hint" data-es="Detalles" data-en="Details">Detalles</span>
+                        <span class="expand-hint" data-es="Abrir detalles" data-en="Open details">Abrir detalles</span>
                     </div>
-                    <div class="tech-box" onclick="toggleStack('stack-media')">
+                    <div class="tech-box" role="button" tabindex="0" data-stack-target="stack-media" aria-expanded="false" onclick="toggleStack('stack-media')">
                         <i class="fas fa-sync"></i>
                         <h3 data-es="Automatización multimedia" data-en="Media automation">Automatización multimedia</h3>
                         <div id="stack-media" class="stack-content hidden">
@@ -150,7 +150,7 @@
                                 <span>Sonarr</span><span>Radarr</span><span>Prowlarr</span><span>Bazarr</span><span>Seerr</span>
                             </div>
                         </div>
-                        <span class="expand-hint" data-es="Detalles" data-en="Details">Detalles</span>
+                        <span class="expand-hint" data-es="Abrir detalles" data-en="Open details">Abrir detalles</span>
                     </div>
                 </div>
             </div>
@@ -163,6 +163,10 @@
                 <p data-es="Una evolución de asistentes locales que explora lenguaje natural, automatización y operación de sistemas con foco en privacidad y control de datos." data-en="An evolving set of local assistants exploring natural language, automation and systems operations with a focus on privacy and data control.">Una evolución de asistentes locales que explora lenguaje natural, automatización y operación de sistemas con foco en privacidad y control de datos.</p>
                 
                 <div class="ai-evolution">
+                    <div class="ai-core" aria-label="Local AI core">
+                        <i class="fas fa-microchip" aria-hidden="true"></i>
+                        <span data-es="Núcleo de IA local" data-en="Local AI core">Núcleo de IA local</span>
+                    </div>
                     <!-- KAREN -->
                     <div class="ai-stage genesis reveal">
                         <div class="stage-header">
@@ -291,7 +295,7 @@
             <div class="content">
                 <h2 class="section-title"><i class="fas fa-tools"></i> <span data-es="Experiencia técnica" data-en="Technical expertise">Experiencia técnica</span></h2>
                 <div class="project-grid">
-                    <div class="project-item" onclick="toggleStack('stack-domo')">
+                    <div class="project-item" role="button" tabindex="0" data-stack-target="stack-domo" aria-expanded="false" onclick="toggleStack('stack-domo')">
                         <div class="project-icon"><i class="fas fa-home"></i></div>
                         <h3 data-es="Domótica inteligente" data-en="Smart home">Domótica inteligente</h3>
                         <p data-es="Centralización con Home Assistant, hardware ESP32 y automatizaciones." data-en="Centralized smart-home workflows with Home Assistant, ESP32 hardware and automations.">Centralización con Home Assistant, hardware ESP32 y automatizaciones.</p>
@@ -300,9 +304,9 @@
                                 <span>Home Assistant</span><span>HACS</span><span>ESP32</span><span>Alexa</span><span>Apple Ecosystem</span>
                             </div>
                         </div>
-                        <span class="expand-hint" data-es="Detalles" data-en="Details">Detalles</span>
+                        <span class="expand-hint" data-es="Abrir detalles" data-en="Open details">Abrir detalles</span>
                     </div>
-                    <div class="project-item" onclick="toggleStack('stack-net')">
+                    <div class="project-item" role="button" tabindex="0" data-stack-target="stack-net" aria-expanded="false" onclick="toggleStack('stack-net')">
                         <div class="project-icon"><i class="fas fa-network-wired"></i></div>
                         <h3 data-es="Infraestructura de red" data-en="Network infrastructure">Infraestructura de red</h3>
                         <p data-es="Redes UniFi, filtrado DNS y redes privadas con Tailscale." data-en="UniFi networks, filtered DNS and private networking with Tailscale.">Redes UniFi, filtrado DNS y redes privadas con Tailscale.</p>
@@ -311,9 +315,9 @@
                                 <span>UniFi</span><span>AdGuard Home</span><span>Tailscale</span><span>VPN</span><span>DNS</span>
                             </div>
                         </div>
-                        <span class="expand-hint" data-es="Detalles" data-en="Details">Detalles</span>
+                        <span class="expand-hint" data-es="Abrir detalles" data-en="Open details">Abrir detalles</span>
                     </div>
-                    <div class="project-item" onclick="toggleStack('stack-hard')">
+                    <div class="project-item" role="button" tabindex="0" data-stack-target="stack-hard" aria-expanded="false" onclick="toggleStack('stack-hard')">
                         <div class="project-icon"><i class="fas fa-memory"></i></div>
                         <h3 data-es="Optimización y montaje de PC" data-en="PC building & tuning">Optimización y montaje de PC</h3>
                         <p data-es="Optimización de estaciones de trabajo, gestión térmica y overclocking estable en plataformas AMD/NVIDIA." data-en="Workstation optimization, thermal management and stable overclocking on AMD/NVIDIA platforms.">Optimización de estaciones de trabajo, gestión térmica y overclocking estable en plataformas AMD/NVIDIA.</p>
@@ -322,7 +326,7 @@
                                 <span>AMD Ryzen</span><span>NVIDIA RTX</span><span>Thermal Modding</span><span>Overclocking</span>
                             </div>
                         </div>
-                        <span class="expand-hint" data-es="Detalles" data-en="Details">Detalles</span>
+                        <span class="expand-hint" data-es="Abrir detalles" data-en="Open details">Abrir detalles</span>
                     </div>
                 </div>
             </div>
@@ -331,7 +335,7 @@
         <!-- FRIDAY DETAILED SECTION -->
         <section id="friday" class="glass-card friday-section">
             <div class="content">
-                        <h2 class="friday-title"><i class="fas fa-robot" aria-hidden="true"></i> <span class="friday-type-text">F.R.I.D.A.Y.</span><span class="friday-cursor" aria-hidden="true"></span></h2>
+                        <h2 class="friday-title"><i class="fas fa-robot" aria-hidden="true"></i> <span class="friday-type-text">F.R.I.D.A.Y.</span></h2>
                 <div class="friday-detail-grid">
                     <div class="detail-item">
                         <span class="terminal-logo" aria-label="Terminal prompt">

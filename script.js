@@ -30,10 +30,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const startFridayTyping = () => {
         if (!fridayTypeText || fridayTypeText.dataset.typingStarted === 'true') return;
         fridayTypeText.dataset.typingStarted = 'true';
-        fridayTypeText.classList.add('is-typing');
         const text = fridayTypeText.textContent || '';
-        fridayTypeText.textContent = '';
-        let characterIndex = 0;
+        let characterIndex = text.length;
+
+        const eraseNextCharacter = () => {
+            characterIndex -= 1;
+            fridayTypeText.textContent = text.slice(0, characterIndex);
+            if (characterIndex > 0) {
+                window.setTimeout(eraseNextCharacter, 70);
+            } else {
+                window.setTimeout(typeNextCharacter, 450);
+            }
+        };
 
         const typeNextCharacter = () => {
             characterIndex += 1;
@@ -41,10 +49,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (characterIndex < text.length) {
                 window.setTimeout(typeNextCharacter, 155);
             } else {
-                fridayTypeText.classList.remove('is-typing');
+                window.setTimeout(eraseNextCharacter, 5000);
             }
         };
 
+        fridayTypeText.textContent = '';
+        characterIndex = 0;
         window.setTimeout(typeNextCharacter, 350);
     };
 
@@ -87,7 +97,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const stack = document.getElementById(stackId);
         if (!stack) return;
         stack.classList.toggle('show');
+        const trigger = document.querySelector(`[data-stack-target="${stackId}"]`);
+        trigger?.setAttribute('aria-expanded', String(stack.classList.contains('show')));
     };
+
+    document.querySelectorAll('[data-stack-target]').forEach((trigger) => {
+        trigger.addEventListener('keydown', (event) => {
+            if (event.key !== 'Enter' && event.key !== ' ') return;
+            event.preventDefault();
+            window.toggleStack(trigger.dataset.stackTarget);
+        });
+    });
 
     const uptimeTimer = document.getElementById('uptime-timer');
     if (uptimeTimer) {
