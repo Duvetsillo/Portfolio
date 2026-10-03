@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let savedLanguage = '';
     try { savedLanguage = localStorage.getItem('portfolio-language') || ''; } catch {}
-    const initialLanguage = savedLanguage || (navigator.language.toLowerCase().startsWith('en') ? 'en' : 'es');
+    const initialLanguage = (['es', 'en'].includes(savedLanguage) ? savedLanguage : '') || (navigator.language.toLowerCase().startsWith('en') ? 'en' : 'es');
     setLanguage(initialLanguage);
 
     const fridayTypeText = document.querySelector('.friday-type-text');
@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         window.addEventListener('scroll', startWhenScrolledIntoView, { passive: true });
+        startWhenScrolledIntoView();
     }
 
     languageToggle?.addEventListener('click', () => {
@@ -103,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const revealObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach((entry) => {
-                if (entry.isIntersecting && userHasScrolled) {
+                if (entry.isIntersecting) {
                     entry.target.classList.add('active');
                     observer.unobserve(entry.target);
                 }
@@ -111,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { threshold: 0.12 });
         revealElements.forEach((element) => revealObserver.observe(element));
         window.addEventListener('scroll', revealVisibleElements, { passive: true });
+        revealVisibleElements();
     } else {
         revealElements.forEach((element) => element.classList.add('active'));
     }
@@ -132,20 +134,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const uptimeTimer = document.getElementById('uptime-timer');
-    if (uptimeTimer) {
-        const startedAt = new Date('2026-01-19T00:00:00');
-        const updateUptime = () => {
-            const elapsedSeconds = Math.max(0, Math.floor((Date.now() - startedAt.getTime()) / 1000));
-            const days = Math.floor(elapsedSeconds / 86400);
-            const hours = Math.floor((elapsedSeconds % 86400) / 3600);
-            const minutes = Math.floor((elapsedSeconds % 3600) / 60);
-            const seconds = elapsedSeconds % 60;
-            uptimeTimer.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-        };
 
-        updateUptime();
-        window.setInterval(updateUptime, 1000);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('js-ready');
+    const nav = document.querySelector('.glass-nav');
+    const menu = document.querySelector('.menu-toggle');
+    const setMenu = open => {
+        nav.classList.toggle('menu-open', open);
+        menu.setAttribute('aria-expanded', String(open));
+        const spanish = document.documentElement.lang === 'es';
+        menu.setAttribute('aria-label', spanish ? (open ? 'Cerrar menú' : 'Abrir menú') : (open ? 'Close menu' : 'Open menu'));
+    };
+    menu.addEventListener('click', () => setMenu(menu.getAttribute('aria-expanded') !== 'true'));
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('click', event => { if (!nav.contains(event.target)) setMenu(false); });
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && nav.classList.contains('menu-open')) { setMenu(false); menu.focus(); }
+    });
+    document.getElementById('language-toggle').addEventListener('click', () => setMenu(nav.classList.contains('menu-open')));
+    setMenu(false);
+    document.querySelectorAll('[data-stack-target]').forEach(trigger => {
+        trigger.setAttribute('aria-controls', trigger.dataset.stackTarget);
+    });
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            nav.querySelectorAll('.nav-links a').forEach(link => {
+                if (link.hash === '#' + entry.target.id) link.setAttribute('aria-current', 'location');
+                else link.removeAttribute('aria-current');
+            });
+        }), { rootMargin: '-15% 0px -60% 0px' });
+        document.querySelectorAll('main>section').forEach(section => observer.observe(section));
     }
-
 });

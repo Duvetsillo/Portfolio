@@ -3,55 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dayver Moreta: infraestructura, homelab, automatización y agentes de inteligencia artificial local.">
+    <meta name="theme-color" content="#070b0a">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <title>Dayver Moreta | System Architect & AI Pioneer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="visual.css">
+    <link rel="stylesheet" href="monochrome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="smooth-scroll">
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
+    <div class="ambient-light" aria-hidden="true"></div>
     <nav class="glass-nav">
-        <div class="nav-logo">DM<span class="dot">.</span></div>
-        <div class="nav-links">
+        <a class="nav-logo" href="#home" aria-label="Dayver Moreta — Inicio">DM<span class="dot">.</span></a>
+        <div class="nav-links" id="navigation-links">
             <a href="#home" data-es="Inicio" data-en="Home">Inicio</a>
             <a href="#about" data-es="Filosofía" data-en="Philosophy">Filosofía</a>
             <a href="#homelab" data-es="Homelab" data-en="Homelab">Homelab</a>
             <a href="#ai-ecosystem" data-es="Ecosistema IA" data-en="AI ecosystem">Ecosistema IA</a>
-            <a href="#projects" data-es="Proyectos" data-en="Projects">Proyectos</a>
+            <a href="#featured-work" data-es="Proyectos" data-en="Projects">Proyectos</a>
             <a href="#expertise" data-es="Experiencia" data-en="Expertise">Experiencia</a>
             <a href="#friday">F.R.I.D.A.Y.</a>
         </div>
         <button class="language-toggle" id="language-toggle" type="button" aria-label="Switch to English" title="Switch to English">EN</button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation-links" aria-label="Abrir menú"><span></span><span></span></button>
     </nav>
 
-    <main class="container">
+    <main class="container" id="main-content">
         <!-- HERO SECTION -->
-        <section id="home" class="glass-card hero">
-            <div class="content">
-                <h1 class="gradient-text">Dayver Moreta</h1>
-                <p class="subtitle" data-es="System Architect & AI Pioneer | Especialista en infraestructura, virtualización y agentes de IA local" data-en="System Architect & AI Pioneer | Infrastructure, virtualization and local AI agents specialist">System Architect & AI Pioneer | Especialista en infraestructura, virtualización y agentes de IA local</p>
-                <div class="social-links">
-                    <a href="https://github.com/Duvetsillo" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/dayver-moreta-501771419/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <section id="home" class="hero architecture-hero">
+            <div class="hero-copy">
+                <p class="hero-eyebrow"><span class="eyebrow-line"></span> SYSTEM ARCHITECT / LOCAL AI</p>
+                <h1 class="gradient-text">Dayver<span class="name-second">Moreta<span class="name-period">.</span></span></h1>
+                <h2 class="hero-statement" data-es="Conecto infraestructura con inteligencia." data-en="I connect infrastructure with intelligence.">Conecto infraestructura con inteligencia.</h2>
+                <p class="subtitle" data-es="Construyo entornos autohospedados, automatizo servicios y desarrollo herramientas de IA local. Del servidor a la experiencia que lo hace útil." data-en="I build self-hosted environments, automate services and develop local AI tools. From the server to the experience that makes it useful.">Construyo entornos autohospedados, automatizo servicios y desarrollo herramientas de IA local. Del servidor a la experiencia que lo hace útil.</p>
+                <div class="hero-actions"><a class="hero-cta" href="#featured-work"><span data-es="Explorar mi trabajo" data-en="Explore my work">Explorar mi trabajo</span><span aria-hidden="true">↗</span></a><a class="hero-secondary" href="#homelab" data-es="Dentro del homelab ↓" data-en="Inside the homelab ↓">Dentro del homelab ↓</a></div>
+                <div class="hero-social-row"><a href="https://github.com/Duvetsillo" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i> GitHub ↗</a><a href="https://www.linkedin.com/in/dayver-moreta-501771419/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn ↗</a></div>
+            </div>
+            <div class="architecture-scene" aria-label="Mapa interactivo de mis proyectos y servicios">
+                <div class="scene-perspective">
+                    <div class="scene-orbit orbit-one" aria-hidden="true"></div><div class="scene-orbit orbit-two" aria-hidden="true"></div><div class="scene-orbit orbit-three" aria-hidden="true"></div>
+                    <svg class="scene-connections" viewBox="0 0 600 520" fill="none" aria-hidden="true"><defs><linearGradient id="connection-light"><stop stop-color="#73bfa7" stop-opacity=".15"/><stop offset=".5" stop-color="#bff6dc"/><stop offset="1" stop-color="#73bfa7" stop-opacity=".15"/></linearGradient></defs><g stroke="#bff6dc29" stroke-width="1"><path d="M300 260L120 120M300 260L480 120M300 260L110 365M300 260L490 365M300 260L300 445"/></g><g class="connection-packets" stroke="url(#connection-light)" stroke-width="2" stroke-dasharray="7 180"><path d="M300 260L120 120M300 260L480 120M300 260L110 365M300 260L490 365M300 260L300 445"/></g></svg>
+                    <button class="scene-core" type="button" data-gallery="aetherion" aria-label="Explorar Aetherion"><span class="core-ring" aria-hidden="true"></span><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="35" fill="none" stroke="currentColor" stroke-width="1"/><path d="M50 17L60 40L83 50L60 60L50 83L40 60L17 50L40 40Z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="50" cy="50" r="9" fill="currentColor"/></svg><strong>AETHERION</strong><small>LOCAL INTELLIGENCE</small></button>
+                    <button class="scene-node node-homarr" type="button" data-gallery="homarr"><span class="node-icon" aria-hidden="true">⌘</span><span><strong>Homarr</strong><small>CONTROL CENTER</small></span><span class="node-link" aria-hidden="true">↗</span></button>
+                    <button class="scene-node node-jellyfin" type="button" data-gallery="jellyfin"><span class="node-icon" aria-hidden="true">▷</span><span><strong>Jellyfin</strong><small>MEDIA SERVER</small></span><span class="node-link" aria-hidden="true">↗</span></button>
+                    <a class="scene-node node-proxmox" href="#homelab"><span class="node-icon" aria-hidden="true">▤</span><span><strong>Proxmox</strong><small>INFRASTRUCTURE</small></span><span class="node-link" aria-hidden="true">↓</span></a>
+                    <a class="scene-node node-friday" href="#friday"><span class="node-icon" aria-hidden="true">&gt;_</span><span><strong>F.R.I.D.A.Y.</strong><small>PERSONAL AGENT</small></span><span class="node-link" aria-hidden="true">↓</span></a>
+                    <a class="scene-bottom" href="#ai-ecosystem"><span class="scene-status-dot" aria-hidden="true"></span> KAREN / ULTRON / F.R.I.D.A.Y.</a>
                 </div>
-                <div class="hero-badges">
-                    <span class="badge">Linux Specialist</span>
-                    <span class="badge">Apple Silicon</span>
-                    <span class="badge">Proxmox VE</span>
-                    <span class="badge">Local LLMs</span>
-                    <span class="badge">TypeScript</span>
-                    <span class="badge">Docker & K8s</span>
-                    <span class="badge">Network Engineering</span>
-                </div>
+                <div class="scene-caption"><span>01 / PERSONAL INFRASTRUCTURE</span><span data-es="Explora los nodos ↗" data-en="Explore the nodes ↗">Explora los nodos ↗</span></div>
+            </div>
+            <div class="hero-system-bar"><div><span class="system-label">HOMELAB / NODE-01</span><strong class="uptime-display">Uptime: <span data-uptime>256d 21h 41m 36s</span></strong></div><div class="hero-stack"><span>PROXMOX VE</span><span>DOCKER</span><span>LOCAL LLMS</span><span>LINUX</span></div><a href="#featured-work" class="scroll-cue"><span data-es="SIGUE EXPLORANDO" data-en="KEEP EXPLORING">SIGUE EXPLORANDO</span><span aria-hidden="true">↓</span></a></div>
+        </section>
+
+        <section id="featured-work" class="showcase-section">
+            <div class="showcase-heading reveal"><div><p class="hero-eyebrow" data-es="PROYECTOS EN FUNCIONAMIENTO" data-en="PROJECTS IN PRACTICE">PROYECTOS EN FUNCIONAMIENTO</p><h2 data-es="De la infraestructura a la experiencia." data-en="From infrastructure to experience.">De la infraestructura<br>a la experiencia.</h2></div><p data-es="Una mirada a los sistemas que configuro y gestiono en mi homelab. Capturas de mis implementaciones reales." data-en="A look at the systems I configure and manage in my homelab. Screenshots from my real implementations.">Una mirada a los sistemas que configuro y gestiono en mi homelab. Capturas de mis implementaciones reales.</p></div>
+            <div class="visual-project-grid">
+                <article class="visual-project aetherion-project reveal">
+                    <button class="project-cover" type="button" data-gallery="aetherion" data-slide="0" aria-label="Abrir galería de Aetherion"><img src="assets/projects/aetherion-overview.png" width="1920" height="1080" alt="Página de Aetherion, herramienta de benchmarking de modelos locales" loading="lazy"><span class="cover-topline"><span>AETHERION / BEYOND THE KNOWN.</span><span class="capture-badge" data-es="PROYECTO DESTACADO" data-en="FEATURED PROJECT">PROYECTO DESTACADO</span></span><span class="cover-action"><span data-es="Ver el proyecto por dentro" data-en="Explore the project">Ver el proyecto por dentro</span><span aria-hidden="true">↗</span></span></button>
+                    <div class="visual-project-copy"><div class="visual-project-heading"><span class="project-number">01 / LOCAL INTELLIGENCE</span><span class="project-count" data-es="4 vistas del proyecto" data-en="4 project views">4 vistas del proyecto</span></div><h3>Aetherion<span class="project-title-dot">.</span></h3><p class="aetherion-lead" data-es="La inteligencia local, puesta a prueba." data-en="Local intelligence, put to the test.">La inteligencia local, puesta a prueba.</p><p data-es="Herramienta para perfilar hardware, comparar modelos locales y revisar velocidad, latencia y validación. Una experiencia que conecta la web del proyecto con la ejecución del cliente en tu equipo." data-en="A tool to profile hardware, compare local models and review speed, latency and validation. An experience connecting the project website with client execution on your machine.">Herramienta para perfilar hardware, comparar modelos locales y revisar velocidad, latencia y validación. Una experiencia que conecta la web del proyecto con la ejecución del cliente en tu equipo.</p><div class="catalog-tags"><span>Python</span><span>Ollama</span><span>GGUF</span><span>Windows client</span></div><div class="project-view-strip"><button type="button" data-gallery="aetherion" data-slide="0" data-es="Portada" data-en="Overview">Portada</button><button type="button" data-gallery="aetherion" data-slide="1">Hardware</button><button type="button" data-gallery="aetherion" data-slide="2" data-es="Cliente" data-en="Client">Cliente</button><button type="button" data-gallery="aetherion" data-slide="3">Intro</button></div><a class="project-live-link" href="https://local-ai-benchmark-fawn.vercel.app/" target="_blank" rel="noopener noreferrer"><span data-es="Visitar Aetherion" data-en="Visit Aetherion">Visitar Aetherion</span> ↗</a></div>
+                </article>
+
+                <article class="visual-project jellyfin-project reveal">
+                    <button class="project-cover" type="button" data-gallery="jellyfin" aria-label="Abrir galería de Jellyfin"><img src="assets/projects/jellyfin-home.png" width="800" height="430" alt="Pantalla de inicio de mi servidor Jellyfin con bibliotecas multimedia" loading="lazy"><span class="cover-topline"><span>JELLYFIN / SELF-HOSTED</span><span class="capture-badge" data-es="CAPTURA REAL" data-en="REAL SCREENSHOT">CAPTURA REAL</span></span><span class="cover-action"><span data-es="Explorar galería" data-en="Explore gallery">Explorar galería</span><span aria-hidden="true">↗</span></span></button>
+                    <div class="visual-project-copy"><div class="visual-project-heading"><span class="project-number">02 / MEDIA</span><span class="project-count" data-es="5 vistas del proyecto" data-en="5 project views">5 vistas del proyecto</span></div><h3 data-es="Tu biblioteca. Tu servidor." data-en="Your library. Your server.">Tu biblioteca. Tu servidor.</h3><p data-es="Servidor multimedia autohospedado con Jellyfin. Un entorno para acceder a bibliotecas de películas y series, continuar la reproducción y explorar televisión en vivo desde una misma interfaz." data-en="A self-hosted Jellyfin media server. An environment for accessing movie and series libraries, continuing playback and exploring live TV from one interface.">Servidor multimedia autohospedado con Jellyfin. Un entorno para acceder a bibliotecas de películas y series, continuar la reproducción y explorar televisión en vivo desde una misma interfaz.</p><div class="catalog-tags"><span>Jellyfin</span><span>Self-hosted</span><span data-es="Biblioteca multimedia" data-en="Media library">Biblioteca multimedia</span><span>Live TV</span></div><div class="project-view-strip" aria-label="Vistas de Jellyfin"><button type="button" data-gallery="jellyfin" data-slide="0" data-es="Inicio" data-en="Home">Inicio</button><button type="button" data-gallery="jellyfin" data-slide="1" data-es="Biblioteca" data-en="Library">Biblioteca</button><button type="button" data-gallery="jellyfin" data-slide="2" data-es="Canales" data-en="Channels">Canales</button><button type="button" data-gallery="jellyfin" data-slide="3" data-es="Guía TV" data-en="TV guide">Guía TV</button><button type="button" data-gallery="jellyfin" data-slide="4" data-es="Acceso" data-en="Sign in">Acceso</button></div></div>
+                </article>
+                <article class="visual-project homarr-project reveal">
+                    <button class="project-cover" type="button" data-gallery="homarr" aria-label="Ampliar captura de Homarr"><img src="assets/projects/homarr.png" width="800" height="401" alt="Mi dashboard Homarr con servicios, contenedores y métricas del homelab" loading="lazy"><span class="cover-topline"><span>HOMARR / CONTROL CENTER</span><span class="capture-badge" data-es="CAPTURA REAL" data-en="REAL SCREENSHOT">CAPTURA REAL</span></span><span class="cover-action"><span data-es="Ver dashboard" data-en="View dashboard">Ver dashboard</span><span aria-hidden="true">↗</span></span></button>
+                    <div class="visual-project-copy"><div class="visual-project-heading"><span class="project-number">03 / INFRASTRUCTURE</span></div><h3 data-es="El homelab, en una vista." data-en="Your homelab, in one view.">El homelab, en una vista.</h3><p data-es="Dashboard Homarr destinado a gestionar servicios y stacks. Una vista centralizada de nodos, contenedores, recursos y accesos para organizar el entorno autohospedado." data-en="A Homarr dashboard for managing services and stacks. A centralized view of nodes, containers, resources and shortcuts to organize the self-hosted environment.">Dashboard Homarr destinado a gestionar servicios y stacks. Una vista centralizada de nodos, contenedores, recursos y accesos para organizar el entorno autohospedado.</p><div class="catalog-tags"><span>Homarr</span><span>Homelab</span><span>Stacks</span><span data-es="Servicios" data-en="Services">Servicios</span></div><div class="homarr-detail"><span aria-hidden="true">⌘</span><span data-es="Una interfaz para conectar tus servicios." data-en="One interface to connect your services.">Una interfaz para conectar tus servicios.</span></div></div>
+                </article>
             </div>
         </section>
 
         <!-- PHILOSOPHY SECTION -->
         <section id="about" class="glass-card">
             <div class="content">
-                <h2 class="section-title"><i class="fas fa-lightbulb"></i> <span data-es="Filosofía de Ingeniería" data-en="Engineering philosophy">Filosofía de Ingeniería</span></h2>
+                <h2 class="section-title"><i class="fas fa-lightbulb" aria-hidden="true"></i> <span data-es="Filosofía de Ingeniería" data-en="Engineering philosophy">Filosofía de Ingeniería</span></h2>
                 <p data-es-html="Mi enfoque se aleja de la teoría pasiva. Creo en la <strong class='accent'>construcción iterativa</strong>: investigar un problema, diseñar la solución, romper el sistema y reconstruirlo con mayor eficiencia. Para mí, la programación no es el fin, sino una herramienta para resolver problemas reales, automatizar entornos complejos y crear sistemas útiles." data-en-html="My approach goes beyond passive theory. I believe in <strong class='accent'>iterative building</strong>: investigate a problem, design a solution, break the system, then rebuild it more efficiently. Programming is not the end goal; it is a tool for solving real problems, automating complex environments and creating useful systems.">Mi enfoque se aleja de la teoría pasiva. Creo en la <strong class="accent">construcción iterativa</strong>: investigar un problema, diseñar la solución, romper el sistema y reconstruirlo con mayor eficiencia. Para mí, la programación no es el fin, sino la herramienta definitiva para resolver problemas reales, automatizar entornos complejos y crear sistemas autónomos que optimicen la vida digital.</p>
                 <p class="secondary-copy" data-es="Busco la intersección entre la potencia del hardware y la inteligencia del software, priorizando privacidad, baja latencia y soberanía tecnológica." data-en="I work at the intersection of hardware performance and software intelligence, prioritizing privacy, low latency and technological sovereignty.">Busco la intersección entre la potencia del hardware y la inteligencia del software, priorizando privacidad, baja latencia y soberanía tecnológica.</p>
                 <p class="philosophy-detail" data-es="Antes de añadir complejidad, intento entender el contexto, medir el problema y elegir una solución segura que pueda mantenerse. La tecnología debe dar autonomía y control, no solo sumar herramientas." data-en="Before adding complexity, I try to understand the context, measure the problem and choose a secure solution that can be maintained. Technology should create autonomy and control, not just add more tools.">Antes de añadir complejidad, intento entender el contexto, medir el problema y elegir una solución segura que pueda mantenerse. La tecnología debe dar autonomía y control, no solo sumar herramientas.</p>
@@ -66,16 +98,16 @@
         <!-- HOMELAB / INFRASTRUCTURE SECTION -->
         <section id="homelab" class="glass-card">
             <div class="content">
-                <h2 class="section-title"><i class="fas fa-server"></i> <span data-es="Infraestructura & Homelab" data-en="Infrastructure & homelab">Infraestructura & Homelab</span></h2>
+                <h2 class="section-title"><i class="fas fa-server" aria-hidden="true"></i> <span data-es="Infraestructura & Homelab" data-en="Infrastructure & homelab">Infraestructura & Homelab</span></h2>
                 <p data-es-html="Despliegue de un entorno doméstico basado en <strong class='accent'>Proxmox VE</strong>, conectando flujos de trabajo Linux y Apple Silicon para explorar virtualización, servicios autoalojados y eficiencia computacional." data-en-html="A Proxmox VE-based home environment connecting Linux and Apple Silicon workflows to explore virtualization, self-hosted services and compute efficiency.">Despliegue de un entorno doméstico basado en <strong class="accent">Proxmox VE</strong>, conectando flujos de trabajo Linux y Apple Silicon para explorar virtualización, servicios autoalojados y eficiencia computacional.</p>
                 
                 <div class="status-panel">
                     <div class="status-header">
                         <div class="node-info">
                             <img src="proxmox (1).png" class="node-logo" alt="Proxmox Logo">
-                            <span class="status-title">System Health Monitor (Node-01)</span>
+                            <span class="status-title">Homelab / Node-01</span>
                         </div>
-                        <span class="status-badge online">All Systems Nominal</span>
+                        <span class="status-badge online">Architecture overview</span>
                     </div>
                     <div id="status-grid" class="status-grid">
                         <div class="status-item">
@@ -116,14 +148,14 @@
                         </div>
                     </div>
                     <div class="uptime-counter">
-                        <i class="fas fa-clock"></i>
-                        <span>Uptime: <span id="uptime-timer">254d 19h 46m 55s</span></span>
+                        <i class="fas fa-clock" aria-hidden="true"></i>
+                        <span class="uptime-display">Uptime: <span id="uptime-timer" data-uptime>256d 21h 41m 36s</span></span>
                     </div>
                 </div>
 
                 <div class="tech-grid">
                     <div class="tech-box" role="button" tabindex="0" data-stack-target="stack-virt" aria-expanded="false" onclick="toggleStack('stack-virt')">
-                        <i class="fas fa-layer-group"></i>
+                        <i class="fas fa-layer-group" aria-hidden="true"></i>
                         <h3 data-es="Sistemas & Virtualización" data-en="Systems & virtualization">Sistemas & Virtualización</h3>
                         <div id="stack-virt" class="stack-content hidden">
                             <div class="tags">
@@ -133,7 +165,7 @@
                         <span class="expand-hint" data-es="Abrir detalles" data-en="Open details">Abrir detalles</span>
                     </div>
                     <div class="tech-box" role="button" tabindex="0" data-stack-target="stack-core" aria-expanded="false" onclick="toggleStack('stack-core')">
-                        <i class="fas fa-cloud"></i>
+                        <i class="fas fa-cloud" aria-hidden="true"></i>
                         <h3 class="accent" data-es="Servicios principales" data-en="Core services">Servicios principales</h3>
                         <div id="stack-core" class="stack-content hidden">
                             <div class="tags">
@@ -143,7 +175,7 @@
                         <span class="expand-hint" data-es="Abrir detalles" data-en="Open details">Abrir detalles</span>
                     </div>
                     <div class="tech-box" role="button" tabindex="0" data-stack-target="stack-media" aria-expanded="false" onclick="toggleStack('stack-media')">
-                        <i class="fas fa-sync"></i>
+                        <i class="fas fa-sync" aria-hidden="true"></i>
                         <h3 data-es="Automatización multimedia" data-en="Media automation">Automatización multimedia</h3>
                         <div id="stack-media" class="stack-content hidden">
                             <div class="tags">
@@ -159,7 +191,7 @@
         <!-- AI ECOSYSTEM SECTION -->
         <section id="ai-ecosystem" class="glass-card">
             <div class="content">
-                <h2 class="section-title"><i class="fas fa-microchip"></i> <span data-es="Ecosistema de IA local" data-en="Local AI ecosystem">Ecosistema de IA local</span></h2>
+                <h2 class="section-title"><i class="fas fa-microchip" aria-hidden="true"></i> <span data-es="Ecosistema de IA local" data-en="Local AI ecosystem">Ecosistema de IA local</span></h2>
                 <p data-es="Una evolución de asistentes locales que explora lenguaje natural, automatización y operación de sistemas con foco en privacidad y control de datos." data-en="An evolving set of local assistants exploring natural language, automation and systems operations with a focus on privacy and data control.">Una evolución de asistentes locales que explora lenguaje natural, automatización y operación de sistemas con foco en privacidad y control de datos.</p>
                 
                 <div class="ai-evolution">
@@ -170,14 +202,14 @@
                     <!-- KAREN -->
                     <div class="ai-stage genesis reveal">
                         <div class="stage-header">
-                            <div class="stage-icon"><i class="fas fa-seedling"></i></div>
+                            <div class="stage-icon"><i class="fas fa-seedling" aria-hidden="true"></i></div>
                             <div class="stage-text">
                                 <h3 class="karen-title">KAREN <span class="tag-label" data-es="El origen" data-en="The beginning">El origen</span></h3>
                                 <p data-es="El primer experimento de asistente local: interacción en lenguaje natural, clasificación de intención y automatización de rutinas." data-en="The first local assistant experiment: natural-language interaction, intent classification and routine automation.">El primer experimento de asistente local: interacción en lenguaje natural, clasificación de intención y automatización de rutinas.</p>
                                 <div class="stage-details">
-                                    <span><i class="fas fa-check"></i> <span data-es="Procesamiento de lenguaje natural" data-en="Natural language processing">Procesamiento de lenguaje natural</span></span>
-                                    <span><i class="fas fa-check"></i> <span data-es="Automatización de rutinas" data-en="Routine automation">Automatización de rutinas</span></span>
-                                    <span><i class="fas fa-check"></i> <span data-es="Gestión inicial de contexto" data-en="Early context handling">Gestión inicial de contexto</span></span>
+                                    <span><i class="fas fa-check" aria-hidden="true"></i> <span data-es="Procesamiento de lenguaje natural" data-en="Natural language processing">Procesamiento de lenguaje natural</span></span>
+                                    <span><i class="fas fa-check" aria-hidden="true"></i> <span data-es="Automatización de rutinas" data-en="Routine automation">Automatización de rutinas</span></span>
+                                    <span><i class="fas fa-check" aria-hidden="true"></i> <span data-es="Gestión inicial de contexto" data-en="Early context handling">Gestión inicial de contexto</span></span>
                                 </div>
                             </div>
                         </div>
@@ -186,14 +218,14 @@
                     <!-- ULTRON -->
                     <div class="ai-stage legacy reveal">
                         <div class="stage-header">
-                            <div class="stage-icon"><i class="fas fa-shield-virus"></i></div>
+                            <div class="stage-icon"><i class="fas fa-shield-virus" aria-hidden="true"></i></div>
                             <div class="stage-text">
                                 <h3 class="legacy-title">ULTRON <span class="tag-label" data-es="La operación" data-en="Operations">La operación</span></h3>
                                 <p data-es="Un agente operativo enfocado en automatización, interacción con infraestructura y organización del conocimiento técnico." data-en="An operations-focused agent exploring automation, infrastructure interaction and technical knowledge management.">Un agente operativo enfocado en automatización, interacción con infraestructura y organización del conocimiento técnico.</p>
                                 <div class="stage-details">
-                                    <span><i class="fas fa-check"></i> <span data-es="Automatización de operaciones" data-en="Operations automation">Automatización de operaciones</span></span>
-                                    <span><i class="fas fa-check"></i> <span data-es="Gestión de conocimiento en Obsidian" data-en="Obsidian knowledge management">Gestión de conocimiento en Obsidian</span></span>
-                                    <span><i class="fas fa-check"></i> <span data-es="Integración de infraestructura (en evolución)" data-en="Infrastructure integration (evolving)">Integración de infraestructura (en evolución)</span></span>
+                                    <span><i class="fas fa-check" aria-hidden="true"></i> <span data-es="Automatización de operaciones" data-en="Operations automation">Automatización de operaciones</span></span>
+                                    <span><i class="fas fa-check" aria-hidden="true"></i> <span data-es="Gestión de conocimiento en Obsidian" data-en="Obsidian knowledge management">Gestión de conocimiento en Obsidian</span></span>
+                                    <span><i class="fas fa-check" aria-hidden="true"></i> <span data-es="Integración de infraestructura (en evolución)" data-en="Infrastructure integration (evolving)">Integración de infraestructura (en evolución)</span></span>
                                 </div>
                             </div>
                         </div>
@@ -202,14 +234,14 @@
                     <!-- FRIDAY -->
                     <div class="ai-stage current reveal">
                         <div class="stage-header">
-                            <div class="stage-icon"><i class="fas fa-brain"></i></div>
+                            <div class="stage-icon"><i class="fas fa-brain" aria-hidden="true"></i></div>
                             <div class="stage-text">
                                 <h3 class="friday-title">F.R.I.D.A.Y. <span class="tag-label" data-es="El soporte" data-en="The support layer">El soporte</span></h3>
                                 <p data-es="Proyecto de asistente técnico orientado a la continuidad operativa, con memoria persistente y líneas de trabajo en voz y monitoreo." data-en="A technical-assistant project focused on operational continuity, persistent memory, and voice and monitoring capabilities.">Proyecto de asistente técnico orientado a la continuidad operativa, con memoria persistente y líneas de trabajo en voz y monitoreo.</p>
                                 <div class="stage-details">
-                                    <span><i class="fas fa-check"></i> <span data-es="Continuidad operativa" data-en="Operational continuity">Continuidad operativa</span></span>
-                                    <span><i class="fas fa-check"></i> <span data-es="Memoria persistente" data-en="Persistent memory">Memoria persistente</span></span>
-                                    <span><i class="fas fa-check"></i> <span data-es="Voz y monitoreo en evolución" data-en="Voice and monitoring in progress">Voz y monitoreo en evolución</span></span>
+                                    <span><i class="fas fa-check" aria-hidden="true"></i> <span data-es="Continuidad operativa" data-en="Operational continuity">Continuidad operativa</span></span>
+                                    <span><i class="fas fa-check" aria-hidden="true"></i> <span data-es="Memoria persistente" data-en="Persistent memory">Memoria persistente</span></span>
+                                    <span><i class="fas fa-check" aria-hidden="true"></i> <span data-es="Voz y monitoreo en evolución" data-en="Voice and monitoring in progress">Voz y monitoreo en evolución</span></span>
                                 </div>
                             </div>
                         </div>
@@ -221,7 +253,7 @@
         <section id="projects" class="glass-card project-showcase">
             <div class="content">
                 <p class="section-kicker" data-es="TRABAJO SELECCIONADO · IA LOCAL · INFRAESTRUCTURA · AUTOMATIZACIÓN" data-en="SELECTED WORK · LOCAL AI · INFRASTRUCTURE · AUTOMATION">TRABAJO SELECCIONADO · IA LOCAL · INFRAESTRUCTURA · AUTOMATIZACIÓN</p>
-                <h2 class="section-title"><i class="fas fa-code-branch"></i> <span data-es="Proyectos" data-en="Projects">Proyectos</span></h2>
+                <h2 class="section-title"><i class="fas fa-code-branch" aria-hidden="true"></i> <span data-es="Proyectos" data-en="Projects">Proyectos</span></h2>
                 <p class="projects-intro" data-es="Una selección de herramientas, sistemas y experimentos construidos para resolver problemas concretos." data-en="A selection of tools, systems and experiments built to solve practical problems.">Una selección de herramientas, sistemas y experimentos construidos para resolver problemas concretos.</p>
                 <div class="project-catalog">
                     <article class="catalog-card featured-project reveal">
@@ -293,10 +325,10 @@
         <!-- OTHER PROJECTS -->
         <section id="expertise" class="glass-card">
             <div class="content">
-                <h2 class="section-title"><i class="fas fa-tools"></i> <span data-es="Experiencia técnica" data-en="Technical expertise">Experiencia técnica</span></h2>
+                <h2 class="section-title"><i class="fas fa-tools" aria-hidden="true"></i> <span data-es="Experiencia técnica" data-en="Technical expertise">Experiencia técnica</span></h2>
                 <div class="project-grid">
                     <div class="project-item" role="button" tabindex="0" data-stack-target="stack-domo" aria-expanded="false" onclick="toggleStack('stack-domo')">
-                        <div class="project-icon"><i class="fas fa-home"></i></div>
+                        <div class="project-icon"><i class="fas fa-home" aria-hidden="true"></i></div>
                         <h3 data-es="Domótica inteligente" data-en="Smart home">Domótica inteligente</h3>
                         <p data-es="Centralización con Home Assistant, hardware ESP32 y automatizaciones." data-en="Centralized smart-home workflows with Home Assistant, ESP32 hardware and automations.">Centralización con Home Assistant, hardware ESP32 y automatizaciones.</p>
                         <div id="stack-domo" class="stack-content hidden">
@@ -307,7 +339,7 @@
                         <span class="expand-hint" data-es="Abrir detalles" data-en="Open details">Abrir detalles</span>
                     </div>
                     <div class="project-item" role="button" tabindex="0" data-stack-target="stack-net" aria-expanded="false" onclick="toggleStack('stack-net')">
-                        <div class="project-icon"><i class="fas fa-network-wired"></i></div>
+                        <div class="project-icon"><i class="fas fa-network-wired" aria-hidden="true"></i></div>
                         <h3 data-es="Infraestructura de red" data-en="Network infrastructure">Infraestructura de red</h3>
                         <p data-es="Redes UniFi, filtrado DNS y redes privadas con Tailscale." data-en="UniFi networks, filtered DNS and private networking with Tailscale.">Redes UniFi, filtrado DNS y redes privadas con Tailscale.</p>
                         <div id="stack-net" class="stack-content hidden">
@@ -318,7 +350,7 @@
                         <span class="expand-hint" data-es="Abrir detalles" data-en="Open details">Abrir detalles</span>
                     </div>
                     <div class="project-item" role="button" tabindex="0" data-stack-target="stack-hard" aria-expanded="false" onclick="toggleStack('stack-hard')">
-                        <div class="project-icon"><i class="fas fa-memory"></i></div>
+                        <div class="project-icon"><i class="fas fa-memory" aria-hidden="true"></i></div>
                         <h3 data-es="Optimización y montaje de PC" data-en="PC building & tuning">Optimización y montaje de PC</h3>
                         <p data-es="Optimización de estaciones de trabajo, gestión térmica y overclocking estable en plataformas AMD/NVIDIA." data-en="Workstation optimization, thermal management and stable overclocking on AMD/NVIDIA platforms.">Optimización de estaciones de trabajo, gestión térmica y overclocking estable en plataformas AMD/NVIDIA.</p>
                         <div id="stack-hard" class="stack-content hidden">
@@ -345,12 +377,12 @@
                         <p data-es="Asistencia para tareas técnicas, automatización y diagnóstico de sistemas." data-en="Assistance with technical tasks, automation and systems troubleshooting.">Asistencia para tareas técnicas, automatización y diagnóstico de sistemas.</p>
                     </div>
                     <div class="detail-item">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-chart-line" aria-hidden="true"></i>
                         <h3 data-es="Monitoreo" data-en="Monitoring">Monitoreo</h3>
                         <p data-es="Línea de trabajo para observar servicios e infraestructura y detectar incidencias." data-en="A workstream for observing services and infrastructure and surfacing incidents.">Línea de trabajo para observar servicios e infraestructura y detectar incidencias.</p>
                     </div>
                     <div class="detail-item">
-                        <i class="fas fa-user-shield"></i>
+                        <i class="fas fa-user-shield" aria-hidden="true"></i>
                         <h3 data-es="Soporte técnico" data-en="Technical support">Soporte técnico</h3>
                         <p data-es="Enfoque en continuidad, documentación y resolución de problemas técnicos." data-en="Focused on continuity, documentation and technical problem solving.">Enfoque en continuidad, documentación y resolución de problemas técnicos.</p>
                     </div>
@@ -365,6 +397,12 @@
         </section>
     </main>
 
+    <footer class="portfolio-footer"><span>DAYVER MORETA / SYSTEMS & LOCAL AI</span><a href="https://www.linkedin.com/in/dayver-moreta-501771419/" target="_blank" rel="noopener noreferrer" data-es="Hablemos de tu próximo proyecto ↗" data-en="Let’s talk about your next project ↗">Hablemos de tu próximo proyecto ↗</a></footer>
+
+    <dialog class="project-lightbox" aria-labelledby="gallery-title"><div class="lightbox-shell"><div class="lightbox-header"><div><span id="gallery-kicker"></span><h2 id="gallery-title"></h2></div><button type="button" class="gallery-close" aria-label="Cerrar galería">✕</button></div><div class="lightbox-image-wrap"><img id="gallery-image" src="assets/projects/homarr.png" alt=""></div><div class="lightbox-footer"><button type="button" class="gallery-prev" aria-label="Imagen anterior">←</button><p id="gallery-caption" aria-live="polite"></p><button type="button" class="gallery-next" aria-label="Imagen siguiente">→</button></div></div></dialog>
+
+    <script src="showcase.js"></script>
+    <script src="portfolio-visual.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
