@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-04",
+  "gallery_views": 15,
+  "web_views": 5,
+  "native_views": 10,
+  "gallery_image_loads": "all passed",
+  "loading_status_clears": true,
+  "languages": [
+    "es",
+    "en"
+  ],
+  "keyboard_navigation": true,
+  "focus_restoration": true,
+  "viewports": [
+    [
+      1440,
+      1000
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "horizontal_overflow": false,
+  "browser_errors": [],
+  "javascript_syntax": "passed",
+  "publication": "local working tree"
+}

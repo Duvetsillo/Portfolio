@@ -1,9 +1,9 @@
 const projectGalleries = {
   aetherion: { title: 'Aetherion', images: [
-    { file: 'aetherion-overview', es: 'Portada y presentación del proyecto', en: 'Project overview and presentation' },
-    { file: 'aetherion-hardware', es: 'Perfil de hardware y explicación de resultados', en: 'Hardware profile and results explanation' },
-    { file: 'aetherion-client', es: 'Ejecución local y descarga del cliente', en: 'Local execution and client download' },
-    { file: 'aetherion-intro', es: 'Identidad y secuencia de introducción', en: 'Identity and introduction sequence' },
+    { file: 'aetherion-overview', es: 'Portada refinada: Satoshi y galería del cliente Qt 6', en: 'Refined homepage: Satoshi and the Qt 6 client gallery' },
+    { file: 'aetherion-hardware', es: 'Recorrido del hardware al informe, con movimiento reducido disponible', en: 'Workflow from hardware to report, with reduced-motion support' },
+    { file: 'aetherion-client', es: 'Cinco categorías de tareas y criterios de validación', en: 'Five task categories and validation criteria' },
+    { file: 'aetherion-web-download', es: 'Descarga actualizada del cliente Qt 6, requisitos y FAQ', en: 'Updated Qt 6 client download, requirements and FAQ' },
     { file: 'aetherion-studio-workspace', studio: true, fixture: false, es: 'Workspace con hardware real y seis modelos locales', en: 'Workspace with real hardware and six local models' },
     { file: 'aetherion-studio-models', studio: true, fixture: true, es: 'Biblioteca, filtros y compatibilidad estimada', en: 'Library, filters and estimated compatibility' },
     { file: 'aetherion-studio-benchmark', studio: true, fixture: true, es: 'Configuración, ajustes avanzados y ejecución', en: 'Configuration, advanced settings and execution' },
@@ -13,7 +13,8 @@ const projectGalleries = {
     { file: 'aetherion-studio-settings', studio: true, fixture: true, es: 'Preferencias, almacenamiento, runtime y cuenta', en: 'Preferences, storage, runtime and account' },
     { file: 'aetherion-studio-login', studio: true, fixture: true, es: 'Acceso al cliente y sesión local', en: 'Client sign-in and local session' },
     { file: 'aetherion-studio-register', studio: true, fixture: true, es: 'Registro y configuración de la cuenta', en: 'Registration and account setup' },
-    { file: 'aetherion-studio-download', studio: true, fixture: true, es: 'Exploración y descarga de modelos GGUF', en: 'GGUF model exploration and download' }
+    { file: 'aetherion-studio-download', studio: true, fixture: true, es: 'Exploración y descarga de modelos GGUF', en: 'GGUF model exploration and download' },
+    { file: 'aetherion-web-mobile', es: 'Portada responsive en una ventana de 390 × 844 px', en: 'Responsive homepage in a 390 × 844 px viewport' }
   ] },
   homarr: { title: 'Homarr', images: [{ file: 'homarr', es: 'Dashboard para gestionar servicios y stacks', en: 'Dashboard for managing services and stacks' }] },
   jellyfin: { title: 'Jellyfin', images: [
@@ -38,6 +39,9 @@ function renderGallery() {
     ? (spanish ? 'CLIENTE IMPLEMENTADO / DATOS DE DEMOSTRACIÓN' : 'IMPLEMENTED CLIENT / DEMONSTRATION DATA')
     : (spanish ? 'PROYECTO / CAPTURAS REALES' : 'PROJECT / REAL SCREENSHOTS');
   const image = document.getElementById('gallery-image');
+  const status = document.getElementById('gallery-status');
+  image.parentElement.setAttribute('aria-busy', 'true');
+  if (status) status.textContent = spanish ? 'Cargando captura…' : 'Loading screenshot…';
   image.src = `assets/projects/${shot.file}.png`;
   image.alt = caption;
   document.getElementById('gallery-caption').textContent = `${galleryIndex + 1} / ${gallery.images.length} — ${caption}`;
@@ -47,6 +51,18 @@ function renderGallery() {
   galleryDialog.querySelector('.gallery-next').setAttribute('aria-label', spanish ? 'Imagen siguiente' : 'Next image');
   galleryDialog.querySelector('.gallery-close').setAttribute('aria-label', spanish ? 'Cerrar galería' : 'Close gallery');
 }
+const galleryImage = document.getElementById('gallery-image');
+galleryImage.addEventListener('load', () => {
+  galleryImage.parentElement.setAttribute('aria-busy', 'false');
+  document.getElementById('gallery-status').textContent = '';
+});
+galleryImage.addEventListener('error', () => {
+  galleryImage.parentElement.setAttribute('aria-busy', 'false');
+  document.getElementById('gallery-status').textContent = document.documentElement.lang === 'es'
+    ? 'No se pudo cargar esta captura. Elige otra vista.'
+    : 'This screenshot could not load. Choose another view.';
+});
+
 document.querySelectorAll('[data-gallery]').forEach(button => button.addEventListener('click', () => {
   galleryKey = button.dataset.gallery;
   galleryIndex = Number(button.dataset.slide || 0);
