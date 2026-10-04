@@ -26,3 +26,30 @@ body::before { background:linear-gradient(#ffffff03 1px,transparent 1px),linear-
 @media(max-width:900px) { .architecture-hero { gap:20px; }.architecture-hero h1 { font-size:87px; }.container { padding-inline:24px; gap:65px; }.aetherion-project .visual-project-copy { padding:30px; }.js-ready .nav-links { background:#101010f5; } }
 @media(max-width:800px) { .architecture-hero { grid-template-columns:1fr; min-height:0; }.architecture-hero h1 { font-size:clamp(80px,16vw,112px); }.hero-statement { font-size:24px; }.architecture-scene { max-width:570px; }.aetherion-project { grid-template-columns:1fr; } }
 @media(max-width:500px) { .container { padding-inline:16px; gap:50px; }.architecture-hero { padding-inline:0; padding-top:6px; }.architecture-hero h1 { font-size:83px; letter-spacing:-5px; }.hero-statement { font-size:20px; }.architecture-hero .subtitle { font-size:12px; }.scene-core { border-radius:18px; }.scene-core::after { border-radius:16px; }.core-ring { border-radius:25px; }.scene-node { border-radius:8px; }.showcase-heading h2 { font-size:36px; }.aetherion-project h3 { font-size:42px; }.aetherion-project .visual-project-copy { padding:24px; } }
+
+/* Aetherion Studio: native client case study within the existing project. */
+.studio-case { grid-column:1 / -1; min-width:0; padding:36px 42px 32px; border-top:1px solid #ffffff16; }
+.studio-case-heading { display:flex; justify-content:space-between; align-items:flex-start; gap:24px; }
+.studio-eyebrow,.studio-release { font:9px 'JetBrains Mono',monospace; letter-spacing:1px; color:#999; }
+.studio-case h4 { margin:12px 0 0; color:#eee; font-size:clamp(23px,3vw,32px); line-height:1.25; font-weight:600; letter-spacing:-1px; }
+.studio-release { flex-shrink:0; padding-top:3px; }
+.studio-intro { max-width:760px; margin:18px 0 26px; color:#aaa; font-size:13px; line-height:1.8; }
+.studio-capture-grid { display:grid; grid-template-columns:minmax(0,1.7fr) minmax(0,1fr); gap:14px; }
+.studio-capture { display:flex; flex-direction:column; min-width:0; padding:0; text-align:left; overflow:hidden; color:#ddd; background:#101010; border:1px solid #ffffff15; border-radius:9px; cursor:zoom-in; transition:border-color .2s,background .2s; }
+.studio-capture:hover { border-color:#ffffff40; background:#151515; }
+.studio-capture:focus-visible,.studio-views button:focus-visible { outline:2px solid #8ba8ff; outline-offset:4px; }
+.studio-capture-main { grid-row:span 2; }
+.studio-capture img { display:block; width:100%; height:auto; }
+.studio-capture-main img { margin-block:auto; }
+.studio-capture>span { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px; padding:12px 14px; border-top:1px solid #ffffff0c; }
+.studio-capture strong { font-size:11px; font-weight:600; }
+.studio-capture small { color:#999; font-size:10px; }
+.studio-views { margin-top:24px; padding-top:0; border-top:0; }
+.studio-views button { min-height:40px; font-size:11px; padding:9px 12px; }
+.studio-proof { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin:28px 0 18px; padding-top:24px; border-top:1px solid #ffffff12; }
+.studio-proof dt { color:#888; font:9px 'JetBrains Mono',monospace; letter-spacing:.6px; }
+.studio-proof dd { margin:9px 0 0; color:#ddd; font-size:12px; line-height:1.6; }
+.studio-note { max-width:900px; margin:0; color:#888; font-size:11px; line-height:1.8; }
+@media(max-width:900px) { .studio-case { padding:30px; }.studio-case-heading { flex-direction:column; gap:14px; }.studio-release { padding:0; }.studio-proof { gap:16px; } }
+@media(max-width:650px) { .studio-case { padding:25px; }.studio-capture-grid { grid-template-columns:1fr 1fr; }.studio-capture-main { grid-column:1 / -1; grid-row:auto; }.studio-proof { grid-template-columns:1fr; gap:18px; }.studio-capture>span { padding:10px; }.studio-capture strong { font-size:10px; }.studio-capture small { font-size:9px; } }
+@media(prefers-reduced-motion:reduce) { .studio-capture { transition:none; } }

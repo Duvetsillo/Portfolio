@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-04",
+  "gallery_views": 14,
+  "desktop_views": 10,
+  "missing_gallery_assets": [],
+  "browser_errors": [],
+  "desktop_viewport": [
+    1440,
+    1400
+  ],
+  "mobile_viewport": [
+    390,
+    844
+  ],
+  "mobile_horizontal_overflow": false,
+  "languages": [
+    "es",
+    "en"
+  ],
+  "keyboard_arrow_navigation": true,
+  "escape_closes_gallery": true,
+  "focus_returns_to_trigger": true,
+  "javascript_syntax_checks": "passed",
+  "git_diff_whitespace_check": "passed",
+  "publication": "local working tree"
+}

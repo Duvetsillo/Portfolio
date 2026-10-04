@@ -3,7 +3,17 @@ const projectGalleries = {
     { file: 'aetherion-overview', es: 'Portada y presentación del proyecto', en: 'Project overview and presentation' },
     { file: 'aetherion-hardware', es: 'Perfil de hardware y explicación de resultados', en: 'Hardware profile and results explanation' },
     { file: 'aetherion-client', es: 'Ejecución local y descarga del cliente', en: 'Local execution and client download' },
-    { file: 'aetherion-intro', es: 'Identidad y secuencia de introducción', en: 'Identity and introduction sequence' }
+    { file: 'aetherion-intro', es: 'Identidad y secuencia de introducción', en: 'Identity and introduction sequence' },
+    { file: 'aetherion-studio-workspace', studio: true, fixture: false, es: 'Workspace con hardware real y seis modelos locales', en: 'Workspace with real hardware and six local models' },
+    { file: 'aetherion-studio-models', studio: true, fixture: true, es: 'Biblioteca, filtros y compatibilidad estimada', en: 'Library, filters and estimated compatibility' },
+    { file: 'aetherion-studio-benchmark', studio: true, fixture: true, es: 'Configuración, ajustes avanzados y ejecución', en: 'Configuration, advanced settings and execution' },
+    { file: 'aetherion-studio-results', studio: true, fixture: true, es: 'Resultados, métricas medidas y comparación', en: 'Results, measured metrics and comparison' },
+    { file: 'aetherion-studio-history', studio: true, fixture: true, es: 'Historial de experimentos y acceso a informes', en: 'Experiment history and report access' },
+    { file: 'aetherion-studio-hardware', studio: true, fixture: true, es: 'Hardware, RAM y VRAM disponible', en: 'Hardware, RAM and available VRAM' },
+    { file: 'aetherion-studio-settings', studio: true, fixture: true, es: 'Preferencias, almacenamiento, runtime y cuenta', en: 'Preferences, storage, runtime and account' },
+    { file: 'aetherion-studio-login', studio: true, fixture: true, es: 'Acceso al cliente y sesión local', en: 'Client sign-in and local session' },
+    { file: 'aetherion-studio-register', studio: true, fixture: true, es: 'Registro y configuración de la cuenta', en: 'Registration and account setup' },
+    { file: 'aetherion-studio-download', studio: true, fixture: true, es: 'Exploración y descarga de modelos GGUF', en: 'GGUF model exploration and download' }
   ] },
   homarr: { title: 'Homarr', images: [{ file: 'homarr', es: 'Dashboard para gestionar servicios y stacks', en: 'Dashboard for managing services and stacks' }] },
   jellyfin: { title: 'Jellyfin', images: [
@@ -23,8 +33,10 @@ function renderGallery() {
   const shot = gallery.images[galleryIndex];
   const spanish = document.documentElement.lang === 'es';
   const caption = spanish ? shot.es : shot.en;
-  document.getElementById('gallery-title').textContent = gallery.title;
-  document.getElementById('gallery-kicker').textContent = spanish ? 'PROYECTO / CAPTURAS REALES' : 'PROJECT / REAL SCREENSHOTS';
+  document.getElementById('gallery-title').textContent = shot.studio ? 'Aetherion Studio' : gallery.title;
+  document.getElementById('gallery-kicker').textContent = shot.fixture
+    ? (spanish ? 'CLIENTE IMPLEMENTADO / DATOS DE DEMOSTRACIÓN' : 'IMPLEMENTED CLIENT / DEMONSTRATION DATA')
+    : (spanish ? 'PROYECTO / CAPTURAS REALES' : 'PROJECT / REAL SCREENSHOTS');
   const image = document.getElementById('gallery-image');
   image.src = `assets/projects/${shot.file}.png`;
   image.alt = caption;

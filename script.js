@@ -10,6 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
             else if (translatedText) item.textContent = translatedText;
         });
 
+        document.querySelectorAll('[data-es-label], [data-en-label]').forEach((item) => {
+            const label = item.dataset[`${language}Label`];
+            if (label) item.setAttribute('aria-label', label);
+        });
+
         if (languageToggle) {
             const nextLanguage = language === 'es' ? 'en' : 'es';
             const action = language === 'es' ? 'Switch to English' : 'Cambiar a español';
