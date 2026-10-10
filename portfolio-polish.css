@@ -1,0 +1,47 @@
+/* Small visual refinement: preserve the existing dark identity. */
+:root {
+  --portfolio-copy: #c7c7c7;
+  --portfolio-secondary: #ababab;
+  --portfolio-focus: #c4d2f9;
+  --portfolio-ease: cubic-bezier(.23, 1, .32, 1);
+}
+html { scroll-padding-top: 112px; }
+.glass-nav { box-shadow: 0 8px 30px #0005; }
+.nav-links a { display: inline-flex; align-items: center; min-height: 44px; font-size: 12px; transition: color 160ms ease, opacity 160ms ease; }
+.language-toggle { min-width: 44px; min-height: 44px; }
+.architecture-hero .subtitle { font-size: 16px; line-height: 1.75; max-width: 48ch; color: var(--portfolio-copy); }
+.section-intro { max-width: 68ch; font-size: 16px; line-height: 1.75; color: var(--portfolio-copy); }
+.catalog-card { padding: 28px; display: flex; flex-direction: column; }
+.catalog-card h3 { line-height: 1.3; text-wrap: balance; overflow-wrap: anywhere; }
+.catalog-card p, .ai-stage .stage-text p, .project-item > p { font-size: 16px; line-height: 1.7; color: var(--portfolio-copy); }
+.catalog-tags { gap: 8px; margin-top: auto; padding-top: 20px; }
+.catalog-tags span { font-size: 12px; line-height: 1.5; padding: 4px 8px; }
+.repo-link, .friday-mini-link, .friday-closing a { display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; width: fit-content; }
+.glass-card:hover { transform: none; }
+.catalog-card:hover { transform: none; }
+#karen .friday-story > p:not(.friday-lead), #karen .detail-item p { font-size: 16px; line-height: 1.75; }
+#karen .detail-item { padding: 26px; }
+#karen .friday-closing p { font-size: 16px; line-height: 1.75; }
+#karen .identity-note { color: #a8bdcc; font-size: 12px; }
+#karen .friday-eyebrow, #karen .identity-label, #karen .friday-pillar-index { font-size: 11px; }
+.hero-cta, .language-toggle, .project-view-strip button { transition: transform 160ms var(--portfolio-ease), background-color 160ms ease, border-color 160ms ease; }
+a:focus-visible, button:focus-visible, [role="button"]:focus-visible { outline: 2px solid var(--portfolio-focus); outline-offset: 4px; }
+@media (hover: hover) and (pointer: fine) {
+  .hero-cta:hover { transform: translateY(-2px); }
+  .hero-cta:active, .language-toggle:active, .project-view-strip button:active { transform: scale(.98); }
+}
+@media (max-width: 800px) {
+  .catalog-card { padding: 24px; }
+  .nav-links { gap: 12px; }
+  .nav-links a { flex-shrink: 0; }
+  #karen .friday-presentation { gap: 24px; }
+}
+@media (max-width: 480px) {
+  .architecture-hero .subtitle { max-width: 100%; }
+  #karen .detail-item { padding: 22px; }
+  .portfolio-footer { gap: 16px; flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-cta, .language-toggle, .project-view-strip button { transition: none; }
+  .hero-cta:hover, .hero-cta:active, .language-toggle:active, .project-view-strip button:active { transform: none; }
+}

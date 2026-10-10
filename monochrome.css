@@ -93,3 +93,9 @@ a:focus-visible,button:focus-visible { outline:2px solid #c4d2f9; outline-offset
 @media(max-width:800px) { .aetherion-project .project-cover { min-height:0; height:auto; aspect-ratio:1440/1000; } }
 @media(max-width:500px) { .architecture-hero h1 { letter-spacing:-.04em; }.studio-capture-grid { grid-template-columns:1fr; }.studio-capture-main { grid-column:auto; }.studio-capture strong { font-size:12px; }.studio-capture small { font-size:11px; }.studio-case { padding:24px; }.lightbox-footer p { font-size:12px; }.lightbox-header span { font-size:10px; }.project-lightbox { border-radius:12px; } }
 @media(prefers-reduced-motion:reduce) { .project-view-strip button:active { transform:none; } }
+
+.license-case { border-top:1px solid #303030; }
+.license-case .license-description { max-width:72ch; color:#c8c8c8; line-height:1.7; font-size:14px; }
+.license-case .license-proof dd { line-height:1.6; }
+.license-capture-grid img { aspect-ratio:1240/780; object-fit:contain; background:#080a0f; }
+@media(max-width:500px) { .license-case .studio-case-heading { align-items:flex-start; flex-direction:column; gap:12px; } }

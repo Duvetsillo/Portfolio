@@ -14,7 +14,10 @@ const projectGalleries = {
     { file: 'aetherion-studio-login', studio: true, fixture: true, es: 'Acceso al cliente y sesión local', en: 'Client sign-in and local session' },
     { file: 'aetherion-studio-register', studio: true, fixture: true, es: 'Registro y configuración de la cuenta', en: 'Registration and account setup' },
     { file: 'aetherion-studio-download', studio: true, fixture: true, es: 'Exploración y descarga de modelos GGUF', en: 'GGUF model exploration and download' },
-    { file: 'aetherion-web-mobile', es: 'Portada responsive en una ventana de 390 × 844 px', en: 'Responsive homepage in a 390 × 844 px viewport' }
+    { file: 'aetherion-web-mobile', es: 'Portada responsive en una ventana de 390 × 844 px', en: 'Responsive homepage in a 390 × 844 px viewport' },
+    { file: 'aetherion-license-accounts', manager: true, fixture: true, es: 'Cuentas de demostración, filtros online/offline y último contacto autenticado', en: 'Demonstration accounts, online/offline filters and last authenticated contact' },
+    { file: 'aetherion-license-plans', manager: true, fixture: true, es: 'Edición de un plan existente: duración personalizada de 45 días, sin emitir otra clave', en: 'Edit an existing plan: 45-day custom duration without issuing another key' },
+    { file: 'aetherion-license-manager', manager: true, fixture: true, es: 'Emisión de licencias: vista sin credenciales, claves ni direcciones privadas', en: 'License issuance: view without credentials, keys or private addresses' }
   ] },
   homarr: { title: 'Homarr', images: [{ file: 'homarr', es: 'Dashboard para gestionar servicios y stacks', en: 'Dashboard for managing services and stacks' }] },
   jellyfin: { title: 'Jellyfin', images: [
@@ -34,9 +37,9 @@ function renderGallery() {
   const shot = gallery.images[galleryIndex];
   const spanish = document.documentElement.lang === 'es';
   const caption = spanish ? shot.es : shot.en;
-  document.getElementById('gallery-title').textContent = shot.studio ? 'Aetherion Studio' : gallery.title;
+  document.getElementById('gallery-title').textContent = shot.manager ? 'Aetherion License Manager' : shot.studio ? 'Aetherion Studio' : gallery.title;
   document.getElementById('gallery-kicker').textContent = shot.fixture
-    ? (spanish ? 'CLIENTE IMPLEMENTADO / DATOS DE DEMOSTRACIÓN' : 'IMPLEMENTED CLIENT / DEMONSTRATION DATA')
+    ? (spanish ? 'INTERFAZ IMPLEMENTADA / DATOS DE DEMOSTRACIÓN' : 'IMPLEMENTED INTERFACE / DEMONSTRATION DATA')
     : (spanish ? 'PROYECTO / CAPTURAS REALES' : 'PROJECT / REAL SCREENSHOTS');
   const image = document.getElementById('gallery-image');
   const status = document.getElementById('gallery-status');
