@@ -1,4 +1,8 @@
 const projectGalleries = {
+  karen: { title: 'Karen Desktop Pet', images: [
+    { file: 'karen-pet-appearance', fixture: true, es: 'Tamaño de 50 a 200 %, presets y vista previa en directo de la mascota', en: 'Size from 50 to 200%, presets and a live pet preview' },
+    { file: 'karen-pet-expressions', fixture: true, es: 'Nueve estados, mirada independiente y controles de movimiento', en: 'Nine states, independent gaze and motion controls' }
+  ] },
   aetherion: { title: 'Aetherion', images: [
     { file: 'aetherion-overview', es: 'Portada refinada: Satoshi y galería del cliente Qt 6', en: 'Refined homepage: Satoshi and the Qt 6 client gallery' },
     { file: 'aetherion-hardware', es: 'Recorrido del hardware al informe, con movimiento reducido disponible', en: 'Workflow from hardware to report, with reduced-motion support' },

@@ -6,6 +6,20 @@
   --portfolio-ease: cubic-bezier(.23, 1, .32, 1);
 }
 html { scroll-padding-top: 112px; }
+.karen-pet-case { display: grid; grid-template-columns: 1fr 1.1fr; gap: 36px; align-items: center; margin-top: 40px; padding: 32px; border: 1px solid #ffffff1c; border-radius: 20px; background: #0d1016; }
+.karen-pet-copy h3 { margin: 14px 0 10px; font-size: clamp(24px, 3vw, 34px); letter-spacing: -.04em; }
+.karen-pet-copy > p { font-size: 14px; line-height: 1.8; color: var(--portfolio-copy); }
+.karen-pet-copy .karen-pet-lead { font-size: 18px; color: #e6edf6; }
+.karen-pet-copy .catalog-tags { margin-top: 0; padding-top: 12px; }
+.karen-pet-links { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 14px; }
+.karen-pet-copy .karen-pet-note { color: var(--portfolio-secondary); font-size: 12px; }
+.karen-pet-preview { margin: 0; min-width: 0; }
+.karen-pet-preview button { display: block; width: 100%; padding: 0; overflow: hidden; border: 1px solid #ffffff21; border-radius: 12px; background: #151923; color: #e6edf6; text-align: left; cursor: pointer; }
+.karen-pet-preview img { display: block; width: 100%; height: auto; }
+.karen-pet-preview button > span { display: block; padding: 14px 18px; font-size: 12px; }
+.karen-pet-preview figcaption { margin-top: 12px; color: var(--portfolio-secondary); font-size: 11px; line-height: 1.7; }
+@media (max-width: 960px) { .karen-pet-case { grid-template-columns: 1fr; gap: 22px; padding: 24px; } }
+@media (max-width: 480px) { .karen-pet-case { padding: 18px; margin-top: 28px; } }
 .glass-nav { box-shadow: 0 8px 30px #0005; }
 .nav-links a { display: inline-flex; align-items: center; min-height: 44px; font-size: 12px; transition: color 160ms ease, opacity 160ms ease; }
 .language-toggle { min-width: 44px; min-height: 44px; }
