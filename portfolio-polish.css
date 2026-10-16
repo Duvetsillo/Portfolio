@@ -13,9 +13,13 @@ html { scroll-padding-top: 112px; }
 .karen-pet-copy .catalog-tags { margin-top: 0; padding-top: 12px; }
 .karen-pet-links { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 14px; }
 .karen-pet-copy .karen-pet-note { color: var(--portfolio-secondary); font-size: 12px; }
+.karen-pet-capabilities { margin: 18px 0; padding-left: 18px; color: var(--portfolio-copy); font-size: 14px; line-height: 1.75; }
+.karen-pet-capabilities li + li { margin-top: 10px; }
+.karen-pet-capabilities li::marker { color: #9bcdd6; }
 .karen-pet-preview { margin: 0; min-width: 0; }
 .karen-pet-preview button { display: block; width: 100%; padding: 0; overflow: hidden; border: 1px solid #ffffff21; border-radius: 12px; background: #151923; color: #e6edf6; text-align: left; cursor: pointer; }
 .karen-pet-preview img { display: block; width: 100%; height: auto; }
+.karen-pet-preview .karen-pet-speaking-preview { width: min(100%, 320px); margin: 24px auto 12px; }
 .karen-pet-preview button > span { display: block; padding: 14px 18px; font-size: 12px; }
 .karen-pet-preview figcaption { margin-top: 12px; color: var(--portfolio-secondary); font-size: 11px; line-height: 1.7; }
 @media (max-width: 960px) { .karen-pet-case { grid-template-columns: 1fr; gap: 22px; padding: 24px; } }

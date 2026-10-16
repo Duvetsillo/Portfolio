@@ -1,5 +1,7 @@
 const projectGalleries = {
   karen: { title: 'Karen Desktop Pet', images: [
+    { file: 'karen-pet-speaking-141', fixture: false, es: 'Versión 1.4.1 instalada: reproducción real de una respuesta, con boca y gestos sincronizados', en: 'Installed version 1.4.1: actual reply playback with synchronized mouth and gestures' },
+    { file: 'karen-pet-perception-141', fixture: true, es: 'Percepción en 1.4.1: transcripción de ejemplo para revisar antes de enviar y captura de pantalla por elección', en: 'Perception in 1.4.1: sample transcript for review before sending and opt-in screen snapshots' },
     { file: 'karen-pet-appearance', fixture: true, es: 'Tamaño de 50 a 200 %, presets y vista previa en directo de la mascota', en: 'Size from 50 to 200%, presets and a live pet preview' },
     { file: 'karen-pet-expressions', fixture: true, es: 'Nueve estados, mirada independiente y controles de movimiento', en: 'Nine states, independent gaze and motion controls' }
   ] },
