@@ -1,4 +1,8 @@
 const projectGalleries = {
+  ilumi: { title: 'Ilumi', images: [
+    { file: 'ilumi-catalog', es: 'Catálogo público de gorras y filtros de productos', en: 'Public hat catalog and product filters' },
+    { file: 'ilumi-product', es: 'Ficha pública con fotos e información de una gorra', en: 'Public product page with hat photos and details' }
+  ] },
   karen: { title: 'Karen Desktop Pet', images: [
     { file: 'karen-pet-speaking-141', fixture: false, es: 'Versión 1.4.1 instalada: reproducción real de una respuesta, con boca y gestos sincronizados', en: 'Installed version 1.4.1: actual reply playback with synchronized mouth and gestures' },
     { file: 'karen-pet-perception-141', fixture: true, es: 'Percepción en 1.4.1: transcripción de ejemplo para revisar antes de enviar y captura de pantalla por elección', en: 'Perception in 1.4.1: sample transcript for review before sending and opt-in screen snapshots' },
