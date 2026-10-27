@@ -1,0 +1,14 @@
+127.0.0.1 - - [18/Oct/2026 11:58:23] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 12:17:44] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 12:17:44] "GET /taller.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 12:17:44] "GET /showcase.js HTTP/1.1" 304 -
+127.0.0.1 - - [18/Oct/2026 12:17:44] "GET /perfil.js HTTP/1.1" 304 -
+127.0.0.1 - - [18/Oct/2026 12:17:44] "GET /assets/fonts/satoshi-700.woff2 HTTP/1.1" 304 -
+127.0.0.1 - - [18/Oct/2026 12:17:44] "GET /assets/fonts/satoshi-400.woff2 HTTP/1.1" 304 -
+127.0.0.1 - - [18/Oct/2026 12:17:45] "GET /assets/fonts/satoshi-500.woff2 HTTP/1.1" 304 -
+127.0.0.1 - - [18/Oct/2026 12:17:49] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [18/Oct/2026 12:17:53] "GET /assets/projects/karen-pet-speaking-141.png HTTP/1.1" 304 -
+127.0.0.1 - - [18/Oct/2026 12:17:58] "GET /assets/profile/dayver.png HTTP/1.1" 304 -
+127.0.0.1 - - [18/Oct/2026 12:18:01] "GET /assets/documents/ciberseguridad.png HTTP/1.1" 304 -
+127.0.0.1 - - [18/Oct/2026 12:18:01] "GET /assets/documents/liderazgo.png HTTP/1.1" 304 -
+127.0.0.1 - - [18/Oct/2026 12:18:01] "GET /assets/documents/liderazgo-insignia.png HTTP/1.1" 304 -

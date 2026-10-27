@@ -1,0 +1,521 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-18T16:02:00Z",
+  "title": "Design System: Dayver Moreta",
+  "extensions": {
+    "colorMeta": {
+      "dark-bg": {
+        "role": "neutral",
+        "displayName": "Graphite canvas",
+        "tonalRamp": [
+          "oklch(15% 0.0240 251.59)",
+          "oklch(26.4% 0.0240 251.59)",
+          "oklch(37.9% 0.0240 251.59)",
+          "oklch(49.3% 0.0240 251.59)",
+          "oklch(60.7% 0.0240 251.59)",
+          "oklch(72.1% 0.0240 251.59)",
+          "oklch(83.6% 0.0240 251.59)",
+          "oklch(95% 0.0240 251.59)"
+        ]
+      },
+      "dark-surface": {
+        "role": "neutral",
+        "displayName": "Slate surface",
+        "tonalRamp": [
+          "oklch(15% 0.0289 246.97)",
+          "oklch(26.4% 0.0289 246.97)",
+          "oklch(37.9% 0.0289 246.97)",
+          "oklch(49.3% 0.0289 246.97)",
+          "oklch(60.7% 0.0289 246.97)",
+          "oklch(72.1% 0.0289 246.97)",
+          "oklch(83.6% 0.0289 246.97)",
+          "oklch(95% 0.0289 246.97)"
+        ]
+      },
+      "dark-raised": {
+        "role": "neutral",
+        "displayName": "Raised slate",
+        "tonalRamp": [
+          "oklch(15% 0.0351 245.86)",
+          "oklch(26.4% 0.0351 245.86)",
+          "oklch(37.9% 0.0351 245.86)",
+          "oklch(49.3% 0.0351 245.86)",
+          "oklch(60.7% 0.0351 245.86)",
+          "oklch(72.1% 0.0351 245.86)",
+          "oklch(83.6% 0.0351 245.86)",
+          "oklch(95% 0.0351 245.86)"
+        ]
+      },
+      "dark-ink": {
+        "role": "neutral",
+        "displayName": "Silver ink",
+        "tonalRamp": [
+          "oklch(15% 0.0076 241.66)",
+          "oklch(26.4% 0.0076 241.66)",
+          "oklch(37.9% 0.0076 241.66)",
+          "oklch(49.3% 0.0076 241.66)",
+          "oklch(60.7% 0.0076 241.66)",
+          "oklch(72.1% 0.0076 241.66)",
+          "oklch(83.6% 0.0076 241.66)",
+          "oklch(95% 0.0076 241.66)"
+        ]
+      },
+      "dark-muted": {
+        "role": "neutral",
+        "displayName": "Steel copy",
+        "tonalRamp": [
+          "oklch(15% 0.0294 246.55)",
+          "oklch(26.4% 0.0294 246.55)",
+          "oklch(37.9% 0.0294 246.55)",
+          "oklch(49.3% 0.0294 246.55)",
+          "oklch(60.7% 0.0294 246.55)",
+          "oklch(72.1% 0.0294 246.55)",
+          "oklch(83.6% 0.0294 246.55)",
+          "oklch(95% 0.0294 246.55)"
+        ]
+      },
+      "dark-line": {
+        "role": "neutral",
+        "displayName": "Slate divider",
+        "tonalRamp": [
+          "oklch(15% 0.0385 247.39)",
+          "oklch(26.4% 0.0385 247.39)",
+          "oklch(37.9% 0.0385 247.39)",
+          "oklch(49.3% 0.0385 247.39)",
+          "oklch(60.7% 0.0385 247.39)",
+          "oklch(72.1% 0.0385 247.39)",
+          "oklch(83.6% 0.0385 247.39)",
+          "oklch(95% 0.0385 247.39)"
+        ]
+      },
+      "dark-accent": {
+        "role": "primary",
+        "displayName": "Pale cobalt",
+        "tonalRamp": [
+          "oklch(15% 0.1085 268.79)",
+          "oklch(26.4% 0.1085 268.79)",
+          "oklch(37.9% 0.1085 268.79)",
+          "oklch(49.3% 0.1085 268.79)",
+          "oklch(60.7% 0.1085 268.79)",
+          "oklch(72.1% 0.1085 268.79)",
+          "oklch(83.6% 0.1085 268.79)",
+          "oklch(95% 0.1085 268.79)"
+        ]
+      },
+      "dark-shadow": {
+        "role": "neutral",
+        "displayName": "Graphite shadow",
+        "tonalRamp": [
+          "oklch(15% 0.0167 246.58)",
+          "oklch(26.4% 0.0167 246.58)",
+          "oklch(37.9% 0.0167 246.58)",
+          "oklch(49.3% 0.0167 246.58)",
+          "oklch(60.7% 0.0167 246.58)",
+          "oklch(72.1% 0.0167 246.58)",
+          "oklch(83.6% 0.0167 246.58)",
+          "oklch(95% 0.0167 246.58)"
+        ]
+      },
+      "light-bg": {
+        "role": "neutral",
+        "displayName": "Pale steel canvas",
+        "tonalRamp": [
+          "oklch(15% 0.0069 247.90)",
+          "oklch(26.4% 0.0069 247.90)",
+          "oklch(37.9% 0.0069 247.90)",
+          "oklch(49.3% 0.0069 247.90)",
+          "oklch(60.7% 0.0069 247.90)",
+          "oklch(72.1% 0.0069 247.90)",
+          "oklch(83.6% 0.0069 247.90)",
+          "oklch(95% 0.0069 247.90)"
+        ]
+      },
+      "light-surface": {
+        "role": "neutral",
+        "displayName": "Cool grey surface",
+        "tonalRamp": [
+          "oklch(15% 0.0121 247.96)",
+          "oklch(26.4% 0.0121 247.96)",
+          "oklch(37.9% 0.0121 247.96)",
+          "oklch(49.3% 0.0121 247.96)",
+          "oklch(60.7% 0.0121 247.96)",
+          "oklch(72.1% 0.0121 247.96)",
+          "oklch(83.6% 0.0121 247.96)",
+          "oklch(95% 0.0121 247.96)"
+        ]
+      },
+      "light-raised": {
+        "role": "neutral",
+        "displayName": "Raised steel",
+        "tonalRamp": [
+          "oklch(15% 0.0199 245.66)",
+          "oklch(26.4% 0.0199 245.66)",
+          "oklch(37.9% 0.0199 245.66)",
+          "oklch(49.3% 0.0199 245.66)",
+          "oklch(60.7% 0.0199 245.66)",
+          "oklch(72.1% 0.0199 245.66)",
+          "oklch(83.6% 0.0199 245.66)",
+          "oklch(95% 0.0199 245.66)"
+        ]
+      },
+      "light-ink": {
+        "role": "neutral",
+        "displayName": "Graphite ink",
+        "tonalRamp": [
+          "oklch(15% 0.0403 246.83)",
+          "oklch(26.4% 0.0403 246.83)",
+          "oklch(37.9% 0.0403 246.83)",
+          "oklch(49.3% 0.0403 246.83)",
+          "oklch(60.7% 0.0403 246.83)",
+          "oklch(72.1% 0.0403 246.83)",
+          "oklch(83.6% 0.0403 246.83)",
+          "oklch(95% 0.0403 246.83)"
+        ]
+      },
+      "light-muted": {
+        "role": "neutral",
+        "displayName": "Steel copy on light",
+        "tonalRamp": [
+          "oklch(15% 0.0392 243.33)",
+          "oklch(26.4% 0.0392 243.33)",
+          "oklch(37.9% 0.0392 243.33)",
+          "oklch(49.3% 0.0392 243.33)",
+          "oklch(60.7% 0.0392 243.33)",
+          "oklch(72.1% 0.0392 243.33)",
+          "oklch(83.6% 0.0392 243.33)",
+          "oklch(95% 0.0392 243.33)"
+        ]
+      },
+      "light-line": {
+        "role": "neutral",
+        "displayName": "Steel divider",
+        "tonalRamp": [
+          "oklch(15% 0.0219 241.42)",
+          "oklch(26.4% 0.0219 241.42)",
+          "oklch(37.9% 0.0219 241.42)",
+          "oklch(49.3% 0.0219 241.42)",
+          "oklch(60.7% 0.0219 241.42)",
+          "oklch(72.1% 0.0219 241.42)",
+          "oklch(83.6% 0.0219 241.42)",
+          "oklch(95% 0.0219 241.42)"
+        ]
+      },
+      "light-accent": {
+        "role": "primary",
+        "displayName": "Cobalt emphasis",
+        "tonalRamp": [
+          "oklch(15% 0.1777 266.14)",
+          "oklch(26.4% 0.1777 266.14)",
+          "oklch(37.9% 0.1777 266.14)",
+          "oklch(49.3% 0.1777 266.14)",
+          "oklch(60.7% 0.1777 266.14)",
+          "oklch(72.1% 0.1777 266.14)",
+          "oklch(83.6% 0.1777 266.14)",
+          "oklch(95% 0.1777 266.14)"
+        ]
+      },
+      "light-shadow": {
+        "role": "neutral",
+        "displayName": "Steel shadow",
+        "tonalRamp": [
+          "oklch(15% 0.0320 249.77)",
+          "oklch(26.4% 0.0320 249.77)",
+          "oklch(37.9% 0.0320 249.77)",
+          "oklch(49.3% 0.0320 249.77)",
+          "oklch(60.7% 0.0320 249.77)",
+          "oklch(72.1% 0.0320 249.77)",
+          "oklch(83.6% 0.0320 249.77)",
+          "oklch(95% 0.0320 249.77)"
+        ]
+      },
+      "solid": {
+        "role": "primary",
+        "displayName": "Cobalt action",
+        "tonalRamp": [
+          "oklch(15% 0.1716 267.38)",
+          "oklch(26.4% 0.1716 267.38)",
+          "oklch(37.9% 0.1716 267.38)",
+          "oklch(49.3% 0.1716 267.38)",
+          "oklch(60.7% 0.1716 267.38)",
+          "oklch(72.1% 0.1716 267.38)",
+          "oklch(83.6% 0.1716 267.38)",
+          "oklch(95% 0.1716 267.38)"
+        ]
+      },
+      "on-solid": {
+        "role": "neutral",
+        "displayName": "Action ink",
+        "tonalRamp": [
+          "oklch(15% 0.0095 273.36)",
+          "oklch(26.4% 0.0095 273.36)",
+          "oklch(37.9% 0.0095 273.36)",
+          "oklch(49.3% 0.0095 273.36)",
+          "oklch(60.7% 0.0095 273.36)",
+          "oklch(72.1% 0.0095 273.36)",
+          "oklch(83.6% 0.0095 273.36)",
+          "oklch(95% 0.0095 273.36)"
+        ]
+      },
+      "solid-hover": {
+        "role": "primary",
+        "displayName": "Deep cobalt action",
+        "tonalRamp": [
+          "oklch(15% 0.1727 266.70)",
+          "oklch(26.4% 0.1727 266.70)",
+          "oklch(37.9% 0.1727 266.70)",
+          "oklch(49.3% 0.1727 266.70)",
+          "oklch(60.7% 0.1727 266.70)",
+          "oklch(72.1% 0.1727 266.70)",
+          "oklch(83.6% 0.1727 266.70)",
+          "oklch(95% 0.1727 266.70)"
+        ]
+      },
+      "media-bg": {
+        "role": "neutral",
+        "displayName": "Screenshot backing",
+        "tonalRamp": [
+          "oklch(15% 0.0279 253.48)",
+          "oklch(26.4% 0.0279 253.48)",
+          "oklch(37.9% 0.0279 253.48)",
+          "oklch(49.3% 0.0279 253.48)",
+          "oklch(60.7% 0.0279 253.48)",
+          "oklch(72.1% 0.0279 253.48)",
+          "oklch(83.6% 0.0279 253.48)",
+          "oklch(95% 0.0279 253.48)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Initial two-part hero statement; breakpoint overrides live in DESIGN.md."
+      },
+      "headline": {
+        "displayName": "Section headline",
+        "purpose": "Main section hierarchy."
+      },
+      "project-title": {
+        "displayName": "Project title",
+        "purpose": "Large project names; breakpoint overrides live in DESIGN.md."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Section reading text; smaller project and caption roles retain their specific sizes."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Compact metadata and utility controls."
+      },
+      "button": {
+        "displayName": "Action",
+        "purpose": "Primary links; 13px at the smallest breakpoint."
+      }
+    },
+    "shadows": [
+      {
+        "name": "stage",
+        "value": "0 24px 55px -28px var(--shadow)",
+        "purpose": "Project preview frame."
+      },
+      {
+        "name": "featured-media",
+        "value": "0 18px 50px -24px var(--shadow)",
+        "purpose": "Aetherion screenshot."
+      },
+      {
+        "name": "gallery",
+        "value": "0 30px 80px -24px #050a10",
+        "purpose": "Native modal dialog."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.23,1,.32,1)",
+        "purpose": "Shared transform and entrance easing."
+      },
+      {
+        "name": "hero-copy-enter",
+        "value": "650ms",
+        "purpose": "One initial opacity .25 to 1 / translateY(18px) to none entrance."
+      },
+      {
+        "name": "stage-enter",
+        "value": "800ms",
+        "purpose": "One initial opacity .25 to 1 / translateX(28px) to none entrance."
+      },
+      {
+        "name": "preview-selection",
+        "value": "220ms",
+        "purpose": "Pointer-only image opacity .45 to 1 / translateY(6px) to 0 after decoding."
+      },
+      {
+        "name": "gallery-enter",
+        "value": "200ms",
+        "purpose": "Opacity .3 to 1 and scale .97 to 1 on dialog opening."
+      },
+      {
+        "name": "image-hover",
+        "value": "220ms",
+        "purpose": "Fine-pointer screenshot translateY(-3px)."
+      },
+      {
+        "name": "press",
+        "value": "120ms",
+        "purpose": "Button and primary action scale .98 while active."
+      },
+      {
+        "name": "control-color",
+        "value": "180ms ease",
+        "purpose": "Button color/background state transitions."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "none",
+        "purpose": "No CSS transitions or animations, smooth scrolling, perspective, hover lift or preview animation."
+      },
+      {
+        "name": "keyboard-input",
+        "value": "immediate",
+        "purpose": "No button transition, dialog entrance, smooth scroll or keyboard-triggered preview animation."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop-max",
+        "value": "1100px"
+      },
+      {
+        "name": "stacked-navigation-max",
+        "value": "850px"
+      },
+      {
+        "name": "mobile-max",
+        "value": "600px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Cobalt project and CV actions with a 50px minimum height.",
+      "html": "<a class=\"ds-primary\" href=\"#proyectos\">Ver proyectos</a>",
+      "css": ".ds-primary{font-family:Satoshi,Arial,sans-serif;display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:14px 22px;font-size:14px;font-weight:700;text-decoration:none;border-radius:8px;white-space:nowrap;background:var(--solid,#3f60cc);color:var(--on-solid,#f6f8ff);transition:transform 120ms var(--ease,cubic-bezier(.23,1,.32,1)),background-color 180ms ease,color 180ms ease;}.ds-primary:focus-visible{outline:3px solid var(--accent,#9cb6ff);outline-offset:6px}.ds-primary:active{transform:scale(.98)}@media(hover:hover) and (pointer:fine){.ds-primary:hover{background:#3152bd;color:var(--on-solid,#f6f8ff)}}@media(max-width:600px){.ds-primary{font-size:13px;padding:14px 20px}}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none!important;animation:none!important}}"
+    },
+    {
+      "name": "Header contact action",
+      "kind": "button",
+      "refersTo": "button-contact-dark",
+      "description": "Theme-aware inverse action; the live header hides it below 600px.",
+      "html": "<a class=\"ds-contact\" href=\"#contacto\">Hablemos</a>",
+      "css": ".ds-contact{font-family:Satoshi,Arial,sans-serif;display:inline-block;padding:12px 16px;border-radius:8px;background:var(--ink,#edf2f6);color:var(--bg,#101923);font-size:13px;text-decoration:none;white-space:nowrap}.ds-contact:focus-visible{outline:3px solid var(--accent,#9cb6ff);outline-offset:6px}@media(hover:hover) and (pointer:fine){.ds-contact:hover{background:var(--accent,#9cb6ff);color:var(--bg,#101923)}}"
+    },
+    {
+      "name": "Screenshot view action",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Outlined entry to a particular gallery view.",
+      "html": "<button class=\"ds-view\" type=\"button\">Resultados</button>",
+      "css": ".ds-view{font-family:Satoshi,Arial,sans-serif;color:var(--ink,#edf2f6);border:1px solid var(--line,#3b4e60);background:transparent;padding:10px 16px;border-radius:8px;font-size:12px;min-height:44px;cursor:pointer;transition:transform 120ms var(--ease,cubic-bezier(.23,1,.32,1)),background-color 180ms ease,color 180ms ease;}.ds-view:focus-visible{outline:3px solid var(--accent,#9cb6ff);outline-offset:6px}.ds-view:active{transform:scale(.98)}@media(hover:hover) and (pointer:fine){.ds-view:hover{background:var(--raised,#223342)}}@media(prefers-reduced-motion:reduce){.ds-view{transition:none!important;animation:none!important}}"
+    },
+    {
+      "name": "Utility control",
+      "kind": "button",
+      "refersTo": "utility-control",
+      "description": "Compact theme, language or menu control.",
+      "html": "<button class=\"ds-utility\" type=\"button\" aria-label=\"Tema oscuro\" aria-pressed=\"true\">Tema</button>",
+      "css": ".ds-utility{font-family:Satoshi,Arial,sans-serif;color:var(--ink,#edf2f6);font-size:12px;background:transparent;border:1px solid var(--line,#3b4e60);border-radius:8px;min-height:44px;min-width:44px;padding:0 10px;cursor:pointer;transition:transform 120ms var(--ease,cubic-bezier(.23,1,.32,1)),background-color 180ms ease,color 180ms ease;}.ds-utility:focus-visible{outline:3px solid var(--accent,#9cb6ff);outline-offset:6px}.ds-utility:active{transform:scale(.98)}@media(hover:hover) and (pointer:fine){.ds-utility:hover{background:var(--raised,#223342)}}@media(max-width:600px){.ds-utility{min-width:40px;padding:0 7px}}@media(prefers-reduced-motion:reduce){.ds-utility{transition:none!important;animation:none!important}}"
+    },
+    {
+      "name": "Text action",
+      "kind": "button",
+      "refersTo": "text-link",
+      "description": "Understated companion action using a bottom rule.",
+      "html": "<a class=\"ds-text-link\" href=\"assets/documents/CV_Dayver_Moreta.pdf\" download>Descargar CV</a>",
+      "css": ".ds-text-link{font-family:Satoshi,Arial,sans-serif;display:inline-block;color:var(--ink,#edf2f6);font-size:14px;text-decoration:none;border-bottom:1px solid var(--line,#3b4e60);padding:10px 0}.ds-text-link:focus-visible{outline:3px solid var(--accent,#9cb6ff);outline-offset:6px}@media(hover:hover) and (pointer:fine){.ds-text-link:hover{color:var(--accent,#9cb6ff)}}@media(max-width:600px){.ds-text-link{font-size:13px}}"
+    },
+    {
+      "name": "Project preview selectors",
+      "kind": "custom",
+      "refersTo": "preview-selector-dark",
+      "description": "Explicit pressed-state project selection. This static preview illustrates the selected state; page JavaScript controls image loading.",
+      "html": "<div class=\"ds-selectors\" role=\"group\" aria-label=\"Vista previa de proyectos\"><button type=\"button\" aria-pressed=\"true\">Aetherion</button><button type=\"button\" aria-pressed=\"false\">Karen</button><button type=\"button\" aria-pressed=\"false\">Homelab</button></div>",
+      "css": ".ds-selectors{display:flex;gap:8px;flex-wrap:wrap}.ds-selectors button{font-family:Satoshi,Arial,sans-serif;background:transparent;color:var(--muted,#afc0d0);border:0;border-radius:8px;padding:12px 18px;min-height:44px;font-size:13px;cursor:pointer;transition:transform 120ms var(--ease,cubic-bezier(.23,1,.32,1)),background-color 180ms ease,color 180ms ease;}.ds-selectors button[aria-pressed=true]{color:var(--ink,#edf2f6);background:var(--raised,#223342)}.ds-selectors button:focus-visible{outline:3px solid var(--accent,#9cb6ff);outline-offset:6px}.ds-selectors button:active{transform:scale(.98)}@media(hover:hover) and (pointer:fine){.ds-selectors button:hover{background:var(--raised,#223342)}}@media(max-width:600px){.ds-selectors{gap:4px}.ds-selectors button{padding:10px 14px;font-size:12px}}@media(prefers-reduced-motion:reduce){.ds-selectors button{transition:none!important;animation:none!important}}"
+    },
+    {
+      "name": "Section navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Compact desktop anchor navigation; the page switches it to a disclosure menu at 850px.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Principal\"><a href=\"#perfil\">Sobre mí</a><a href=\"#proyectos\">Proyectos</a><a href=\"#trayectoria\">Trayectoria</a><a href=\"#formacion\">Formación</a></nav>",
+      "css": ".ds-nav{display:flex;gap:26px;align-items:center;flex-wrap:wrap}.ds-nav a{font-family:Satoshi,Arial,sans-serif;text-decoration:none;font-size:13px;padding:16px 0;color:var(--muted,#afc0d0)}.ds-nav a:focus-visible{outline:3px solid var(--accent,#9cb6ff);outline-offset:6px}@media(hover:hover) and (pointer:fine){.ds-nav a:hover{color:var(--ink,#edf2f6)}}"
+    },
+    {
+      "name": "Project contribution disclosure",
+      "kind": "custom",
+      "refersTo": "disclosure",
+      "description": "Native progressive disclosure for factual project details.",
+      "html": "<details class=\"ds-details\"><summary>Qué construí</summary><p>Integración de voz y modelos, arquitectura cliente-servidor e interfaz de escritorio.</p></details>",
+      "css": ".ds-details{font-family:Satoshi,Arial,sans-serif;max-width:600px;color:var(--muted,#afc0d0)}.ds-details summary{font-size:13px;color:var(--accent,#9cb6ff);padding:10px 0;min-height:44px;cursor:pointer}.ds-details summary:focus-visible{outline:3px solid var(--accent,#9cb6ff);outline-offset:6px}.ds-details p{margin:0;font-size:14px;line-height:1.7;padding:8px 0 12px}"
+    },
+    {
+      "name": "Experience entry",
+      "kind": "card",
+      "refersTo": "timeline-entry",
+      "description": "Flat timeline item with a date, title, role and factual description.",
+      "html": "<article class=\"ds-experience\"><p class=\"ds-date\">Octubre 2024 - actualidad</p><h3>Servicios técnicos independientes</h3><span>Freelancer</span><p class=\"ds-description\">Soporte, diagnóstico y mantenimiento de computadoras.</p></article>",
+      "css": ".ds-experience{font-family:Satoshi,Arial,sans-serif;border-top:1px solid var(--line,#3b4e60);padding-top:24px;color:var(--ink,#edf2f6)}.ds-experience .ds-date{margin:0;color:var(--accent,#9cb6ff);font-size:13px;line-height:1.7}.ds-experience h3{margin:14px 0 0;font-size:26px;font-weight:500;letter-spacing:-.025em;line-height:1.25}.ds-experience>span{display:block;margin-top:10px;font-size:14px;color:var(--muted,#afc0d0)}.ds-experience .ds-description{margin:18px 0 0;font-size:15px;color:var(--muted,#afc0d0);line-height:1.7}"
+    },
+    {
+      "name": "Gallery controls",
+      "kind": "button",
+      "refersTo": "gallery-control",
+      "description": "Authored SVG close and navigation controls with accessible names and disabled boundary state.",
+      "html": "<div class=\"ds-gallery-controls\"><button type=\"button\" aria-label=\"Imagen anterior\" disabled><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M19 12H5m7-7-7 7 7 7\"/></svg></button><button type=\"button\" aria-label=\"Cerrar galería\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\"><path d=\"m6 6 12 12M18 6 6 18\"/></svg></button><button type=\"button\" aria-label=\"Imagen siguiente\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14m-7-7 7 7-7 7\"/></svg></button></div>",
+      "css": ".ds-gallery-controls{display:flex;gap:24px}.ds-gallery-controls button{font-family:Satoshi,Arial,sans-serif;display:inline-grid;place-items:center;flex-shrink:0;min-height:44px;min-width:44px;border:1px solid var(--line,#3b4e60);background:transparent;color:var(--ink,#edf2f6);border-radius:8px;font-size:22px;cursor:pointer;transition:transform 120ms var(--ease,cubic-bezier(.23,1,.32,1)),background-color 180ms ease,color 180ms ease;}.ds-gallery-controls button:focus-visible{outline:3px solid var(--accent,#9cb6ff);outline-offset:6px}.ds-gallery-controls button:active{transform:scale(.98)}.ds-gallery-controls button:disabled{opacity:.4;cursor:default}@media(prefers-reduced-motion:reduce){.ds-gallery-controls button{transition:none!important;animation:none!important}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Industrial Design Exhibition",
+    "overview": "This document captures the implemented local proposal, not a user-approved replacement or a published site. Its visual language gives real software screenshots and the owner's portrait room to establish the identity: cool graphite, layered slate, clear Satoshi typography and deliberate changes in scale. The metaphor is descriptive of the existing direction, not a new claim of user approval.\n\nDepth is concentrated around the work. Text remains still and readable, controls remain explicit, and open space separates projects from personal background. The light theme preserves the same structure and hierarchy. Normative primitives above come from `taller.css`; the sidecar adds motion, breakpoint, shadow and component-preview details.",
+    "keyCharacteristics": [
+      "Real project screenshots, the existing portrait and documented credentials.",
+      "Cool neutral surfaces with cobalt actions and theme-specific blue emphasis.",
+      "Large medium-weight headlines, compact labels and generous paragraph leading.",
+      "Varied project scale, restrained perspective and visible keyboard focus."
+    ],
+    "rules": [
+      {
+        "name": "The Theme Pairing Rule",
+        "body": "Change neutral and accent roles together. Respect the system preference until a visitor explicitly selects a theme; preserve that selection locally.",
+        "section": "colors"
+      },
+      {
+        "name": "The Still Copy Rule",
+        "body": "Do not animate reading text during interaction. The initial hero entrance is the only text entrance in this implementation.",
+        "section": "typography"
+      },
+      {
+        "name": "The Evidence Depth Rule",
+        "body": "Apply depth to the work being presented, keeping copy and navigation stable.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use the paired theme roles and preserve a visitor's chosen theme.",
+      "Do present source screenshots with contain sizing and honest provenance captions.",
+      "Do keep Spanish and English labels, accessible names and state messages aligned.",
+      "Do preserve visible focus, native disclosure behavior and gallery focus restoration.",
+      "Do use existing portrait and credential assets with their documented public-data treatment."
+    ],
+    "donts": [
+      "Don't replace real project evidence with generated hardware artwork or a synthetic portrait.",
+      "Don't add looping motion, animated reading text or unmeasured skill bars.",
+      "Don't apply perspective or motion when reduced motion is requested.",
+      "Don't invent results, qualifications or numerical claims to fill a visual layout.",
+      "Don't treat this local proposal as approved for publication or remove the comparison versions."
+    ]
+  }
+}
